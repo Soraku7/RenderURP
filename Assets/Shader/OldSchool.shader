@@ -2,6 +2,8 @@
 {
     Properties
     {
+        _SpecularPow("高光次幂" , Range(1 , 90)) = 30
+        _MainCol("环境颜色" , color) = (1.0 , 1.0 , 1.0 , 1.0)
     }
     SubShader
     {
@@ -18,6 +20,9 @@
 
             #include "UnityCG.cginc"
 
+            uniform float3 _MainCol;
+            uniform float _SpecularPow;
+            
             struct appdata
             {
                 float4 vertex : POSITION;
@@ -26,15 +31,17 @@
 
             struct v2f
             {
-                float4 pos : SV_POSITION;
-                float3 nDirWS : TEXCOORD0;
+                float4 posCS : SV_POSITION;
+                float4 posWS : TEXCOORD0;
+                float3 nDirWS : TEXCOORD1;
             };
 
 
             v2f vert (appdata v)
             {
                 v2f o = (v2f)0;
-                o.pos = UnityObjectToClipPos(v.vertex);
+                o.posCS = UnityObjectToClipPos(v.vertex);
+                o.posWS = mul(unity_ObjectToWorld , v.vertex);
                 o.nDirWS = UnityObjectToWorldNormal(v.normal);
 
                 return o;
@@ -44,9 +51,17 @@
             {
                 float3 nDir = i.nDirWS;
                 float3 lDir = normalize(_WorldSpaceLightPos0.xyz);
+                float3 vDir = normalize(_WorldSpaceCameraPos.xyz - i.posWS);
+                float3 hDir = normalize(lDir + vDir);
+                
                 float nDotl = dot(nDir , lDir);
+                float ndoth = dot(nDir , hDir);
+                
                 float lambort = max(0.0 , nDotl);
-                return lambort.xxxx;
+                float blinnPhong = pow(max(0.0 , ndoth) , _SpecularPow);
+
+                float3 final = _MainCol * lambort + blinnPhong;
+                return float4(final.x , final.y , final.z , 1.0);
             }
             ENDCG
         }

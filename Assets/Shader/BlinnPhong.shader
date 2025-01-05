@@ -1,7 +1,5 @@
 Shader "Shader/Blinn-Phong" {
     Properties {
-        _MainCol ("漫反射颜色", color) = (1.0, 1.0, 1.0, 1.0)
-        _SpecularCol("高光颜色", color) = (1.0, 1.0, 1.0, 1.0)
         _SpecularPow ("高光次幂",range(1, 90)) = 30
     }
     SubShader {
@@ -20,10 +18,6 @@ Shader "Shader/Blinn-Phong" {
             #pragma fragment frag
             #include "Lighting.cginc"
             
-
-            //输入参数，注意与开头声明的对应
-            uniform float3 _MainCol;
-            uniform float3 _SpecularCol;
             uniform float _SpecularPow;
             
             //输入结构
@@ -57,14 +51,10 @@ Shader "Shader/Blinn-Phong" {
                 float3 vDir = normalize(_WorldSpaceCameraPos.xyz - i.posWS); //视角方向，用相机位置-顶点位置就是视角方向
                 float3 hDir = normalize(vDir + lDir); //视角方向和光照方向的中间方向
                 //准备点积结果
-                float ndotl = dot(nDir, lDir);
                 float ndoth = dot(nDir, hDir);
-                //光照模型计算
-                float3 ambient = UNITY_LIGHTMODEL_AMBIENT.rgb; //环境光
-                float3 diffuse = _LightColor0.rgb * _MainCol * max(0, ndotl); //漫反射
-                float3 specular = _LightColor0.rgb * _SpecularCol * pow(max(0, ndoth), _SpecularPow); //高光
-                float3 blinnPhong =  ambient + diffuse + specular; //最终颜色
-
+                float3 specular = _LightColor0.rgb  * pow(max(0, ndoth), _SpecularPow); //高光
+                float3 blinnPhong = specular; //最终颜色
+                
                 return float4(blinnPhong, 1.0);
             }
             ENDCG
