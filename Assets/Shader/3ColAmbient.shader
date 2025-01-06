@@ -54,13 +54,16 @@ Shader "Unlit/3ColAmbient"
             fixed4 frag (v2f i) : SV_Target
             {
                 float3 nDir = i.nDirWS;
+                
                 float upMask = max(0.0 , nDir.g);
                 float downMask = max(0.0 , -nDir.g);
                 float sideMask = 1 - upMask - downMask;
 
+                float occlusion = tex2D(_Occlusion , i.uv);
                 float3 envCol= _EnvUpCol * upMask + _EnvSideCol * sideMask + _EnvDownCol * downMask;
 
-                return float4(envCol , 1.0);
+                float3 finalCol = envCol * occlusion;
+                return float4(finalCol , 1.0);
                 
             }
             ENDCG
