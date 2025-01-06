@@ -22,7 +22,7 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _SpecularPow: 30
+    - _SpecularPow: 6
     m_Colors:
-    - _MainCol: {r: 1, g: 1, b: 1, a: 1}
+    - _MainCol: {r: 0.9622642, g: 0.45752937, b: 0.45752937, a: 1}
   m_BuildTextureStacks: []
