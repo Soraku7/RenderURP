@@ -7,6 +7,8 @@ Shader "3ColAmbient"
 		_EnvSideCol("EnvSideCol", Color) = (0,0,0,0)
 		_EnvUpCol("EnvUpCol", Color) = (0.5283019,0,0,0)
 		_EnvDownCol("EnvDownCol", Color) = (0,0,0,0)
+		_TextureSample0("Texture Sample 0", 2D) = "white" {}
+		[HideInInspector] _texcoord( "", 2D ) = "white" {}
 		[HideInInspector] __dirty( "", Int ) = 1
 	}
 
@@ -21,18 +23,22 @@ Shader "3ColAmbient"
 		struct Input
 		{
 			float3 worldNormal;
+			float2 uv_texcoord;
 		};
 
 		uniform float4 _EnvUpCol;
 		uniform float4 _EnvSideCol;
 		uniform float4 _EnvDownCol;
+		uniform sampler2D _TextureSample0;
+		uniform float4 _TextureSample0_ST;
 
 		void surf( Input i , inout SurfaceOutputStandard o )
 		{
 			float3 ase_worldNormal = i.worldNormal;
 			float temp_output_3_0 = max( 0.0 , ase_worldNormal.y );
 			float temp_output_11_0 = max( ( ase_worldNormal.y * -1.0 ) , 0.0 );
-			o.Emission = ( ( ( _EnvUpCol * temp_output_3_0 ) + ( max( ( ( 1.0 - temp_output_3_0 ) - temp_output_11_0 ) , 0.0 ) * _EnvSideCol ) ) + ( temp_output_11_0 * _EnvDownCol ) ).rgb;
+			float2 uv_TextureSample0 = i.uv_texcoord * _TextureSample0_ST.xy + _TextureSample0_ST.zw;
+			o.Emission = ( ( ( ( _EnvUpCol * temp_output_3_0 ) + ( max( ( ( 1.0 - temp_output_3_0 ) - temp_output_11_0 ) , 0.0 ) * _EnvSideCol ) ) + ( temp_output_11_0 * _EnvDownCol ) ) * tex2D( _TextureSample0, uv_TextureSample0 ) ).rgb;
 			o.Alpha = 1;
 		}
 
@@ -63,8 +69,9 @@ Shader "3ColAmbient"
 			struct v2f
 			{
 				V2F_SHADOW_CASTER;
-				float3 worldPos : TEXCOORD1;
-				float3 worldNormal : TEXCOORD2;
+				float2 customPack1 : TEXCOORD1;
+				float3 worldPos : TEXCOORD2;
+				float3 worldNormal : TEXCOORD3;
 				UNITY_VERTEX_INPUT_INSTANCE_ID
 				UNITY_VERTEX_OUTPUT_STEREO
 			};
@@ -75,9 +82,12 @@ Shader "3ColAmbient"
 				UNITY_INITIALIZE_OUTPUT( v2f, o );
 				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO( o );
 				UNITY_TRANSFER_INSTANCE_ID( v, o );
+				Input customInputData;
 				float3 worldPos = mul( unity_ObjectToWorld, v.vertex ).xyz;
 				half3 worldNormal = UnityObjectToWorldNormal( v.normal );
 				o.worldNormal = worldNormal;
+				o.customPack1.xy = customInputData.uv_texcoord;
+				o.customPack1.xy = v.texcoord;
 				o.worldPos = worldPos;
 				TRANSFER_SHADOW_CASTER_NORMALOFFSET( o )
 				return o;
@@ -91,6 +101,7 @@ Shader "3ColAmbient"
 				UNITY_SETUP_INSTANCE_ID( IN );
 				Input surfIN;
 				UNITY_INITIALIZE_OUTPUT( Input, surfIN );
+				surfIN.uv_texcoord = IN.customPack1.xy;
 				float3 worldPos = IN.worldPos;
 				half3 worldViewDir = normalize( UnityWorldSpaceViewDir( worldPos ) );
 				surfIN.worldNormal = IN.worldNormal;
@@ -110,7 +121,7 @@ Shader "3ColAmbient"
 }
 /*ASEBEGIN
 Version=18500
-530;203;1280;722;728.7535;389.3631;1.6;True;True
+10;319;1280;716;-360.5753;44.67924;1;True;True
 Node;AmplifyShaderEditor.CommentaryNode;16;-847.6517,547.5947;Inherit;False;978.4878;418.1241;下半部分;6;8;9;12;11;14;13;;1,1,1,1;0;0
 Node;AmplifyShaderEditor.CommentaryNode;5;-833.9514,-270.7081;Inherit;False;882.214;463.545;上半部分;5;6;7;3;4;2;;1,1,1,1;0;0
 Node;AmplifyShaderEditor.WorldNormalVector;1;-1132.863,-44.17397;Inherit;False;False;1;0;FLOAT3;0,0,1;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
@@ -122,8 +133,8 @@ Node;AmplifyShaderEditor.RangedFloatNode;12;-479.5638,724.7188;Inherit;False;Con
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;8;-584.311,597.5947;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleMaxOpNode;11;-286.5639,601.7188;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.OneMinusNode;17;-428.6251,271.5106;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0
-Node;AmplifyShaderEditor.RangedFloatNode;20;-117.2753,381.8209;Inherit;False;Constant;_Float3;Float 3;0;0;Create;True;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleSubtractOpNode;18;-225.6252,268.3105;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
+Node;AmplifyShaderEditor.RangedFloatNode;20;-117.2753,381.8209;Inherit;False;Constant;_Float3;Float 3;0;0;Create;True;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.ColorNode;22;142.5988,379.3035;Inherit;False;Property;_EnvSideCol;EnvSideCol;0;0;Create;True;0;0;False;0;False;0,0,0,0;0.04249215,0.6886792,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SimpleMaxOpNode;19;9.624524,269.9209;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.ColorNode;7;-391.8875,-216.1024;Inherit;False;Property;_EnvUpCol;EnvUpCol;1;0;Create;True;0;0;False;0;False;0.5283019,0,0,0;0,0.2332752,0.6784314,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
@@ -132,7 +143,9 @@ Node;AmplifyShaderEditor.SimpleMultiplyOpNode;6;-154.9876,-34.80243;Inherit;Fals
 Node;AmplifyShaderEditor.ColorNode;14;-236.5638,756.7187;Inherit;False;Property;_EnvDownCol;EnvDownCol;2;0;Create;True;0;0;False;0;False;0,0,0,0;0.8301887,0.8301887,0.8301887,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;13;-31.56389,598.7188;Inherit;False;2;2;0;FLOAT;0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
 Node;AmplifyShaderEditor.SimpleAddOpNode;15;628.3823,249.0072;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
-Node;AmplifyShaderEditor.SimpleAddOpNode;23;840.5272,249.5169;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
+Node;AmplifyShaderEditor.SamplerNode;24;711.5753,410.3207;Inherit;True;Property;_TextureSample0;Texture Sample 0;3;0;Create;True;0;0;False;0;False;-1;None;eabfa8d88fe328f4b952fb81f530c4a4;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.SimpleAddOpNode;23;812.5272,251.5169;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
+Node;AmplifyShaderEditor.SimpleMultiplyOpNode;25;1029.575,281.3207;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
 Node;AmplifyShaderEditor.StandardSurfaceOutputNode;0;1210.034,105.3841;Float;False;True;-1;2;ASEMaterialInspector;0;0;Standard;3ColAmbient;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;Back;0;False;-1;0;False;-1;False;0;False;-1;0;False;-1;False;0;Opaque;0.5;True;True;0;False;Opaque;;Geometry;All;14;all;True;True;True;True;0;False;-1;False;0;False;-1;255;False;-1;255;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;False;2;15;10;25;False;0.5;True;0;0;False;-1;0;False;-1;0;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;0;0,0,0,0;VertexOffset;True;False;Cylindrical;False;Relative;0;;-1;-1;-1;-1;0;False;0;0;False;-1;-1;0;False;-1;0;0;0;False;0.1;False;-1;0;False;-1;False;16;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;13;FLOAT3;0,0,0;False;11;FLOAT3;0,0,0;False;12;FLOAT3;0,0,0;False;14;FLOAT4;0,0,0,0;False;15;FLOAT3;0,0,0;False;0
 WireConnection;2;0;1;0
 WireConnection;3;0;4;0
@@ -156,6 +169,8 @@ WireConnection;15;0;6;0
 WireConnection;15;1;21;0
 WireConnection;23;0;15;0
 WireConnection;23;1;13;0
-WireConnection;0;2;23;0
+WireConnection;25;0;23;0
+WireConnection;25;1;24;0
+WireConnection;0;2;25;0
 ASEEND*/
-//CHKSM=7E85EE506CB3131211C75DC41293FE78597B2D05
+//CHKSM=E8AFE91D03C77EE6689D4271B0F8EDEFBF92ACFE
