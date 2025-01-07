@@ -55,6 +55,14 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _TextureSample0:
+        m_Texture: {fileID: 2800000, guid: eabfa8d88fe328f4b952fb81f530c4a4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5
@@ -75,6 +83,11 @@ Material:
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
+    - _BaseCol: {r: 0, g: 0.16981131, b: 0.0017648732, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EnvDownCol: {r: 0.1191118, g: 0.5471698, b: 0, a: 0}
+    - _EnvSideCol: {r: 0.3127408, g: 0.7924528, b: 0.1233535, a: 0}
+    - _EnvUpCol: {r: 0.4968057, g: 0.7169812, b: 0.3551086, a: 0}
+    - _LightCol: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
