@@ -2,7 +2,6 @@ Shader "Unlit/Shadow"
 {
     Properties
     {
-
     }
     SubShader
     {
@@ -40,7 +39,7 @@ Shader "Unlit/Shadow"
 
             v2f vert (appdata v)
             {
-                v2f o;
+                v2f o = (v2f)0;
                 o.pos = UnityObjectToClipPos(v.vertex);
                 TRANSFER_VERTEX_TO_FRAGMENT(o)
 
