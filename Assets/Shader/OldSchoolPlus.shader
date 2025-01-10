@@ -8,6 +8,7 @@ Shader "Unlit/OldSchoolPlus"
         _EnvDownCol ("EnvDownCol" , color) = (1.0 , 1.0 , 1.0 , 1.0)
         _BaseColor ("BaseColor", Color) = (1,1,1,1)
         _LightColor ("LightColor", Color) = (1,1,1,1)
+        _SpecularPow ("Specular" , Range(10 , 90)) = 30  
     }
     SubShader
     {
@@ -35,6 +36,7 @@ Shader "Unlit/OldSchoolPlus"
             uniform float3 _EnvDownCol;
             uniform float4 _BaseColor;
             uniform float4 _LightColor;
+            uniform float _SpecularPow;
                 
             struct appdata
             {
@@ -47,9 +49,9 @@ Shader "Unlit/OldSchoolPlus"
             {
                 float4 pos : SV_POSITION;
                 float2 uv : TEXCOORD0;
-                float3 normalWS : TEXCOORD1;
+                float3 normalWS : TEXCOORD2;
                 
-                LIGHTING_COORDS(0,1)
+                LIGHTING_COORDS(3,4)
             };
 
 
@@ -76,13 +78,17 @@ Shader "Unlit/OldSchoolPlus"
                 float upMask = max(0.0 , i.normalWS.y);
                 float downMask = max(0.0 , -i.normalWS.y);
                 float sideMask = 1 - upMask - downMask;
+                float3 envCol = upMask * _EnvUpCol + sideMask * _EnvSideCol + downMask * _EnvDownCol;
+                
                 //Lambort
                 float3 lambort = _BaseColor.rgb * max(0.0 , dot(nDirWS , lDir));
                 //Phong
+                float3 lReflect = normalize(reflect(-lDir , nDirWS));
+                float3 phong = max(0.0 , dot(lReflect , vDir)) * _SpecularPow;
                 
+                float3 final = (lambort + phong) * _LightColor * shadow + envCol;
                 
-                
-                return float4(shadow, shadow, shadow, 1.0);  
+                return float4(final.x, final.y, final.z, 1.0);  
             }
             ENDCG
         }
