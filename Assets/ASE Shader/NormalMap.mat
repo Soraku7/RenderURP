@@ -7,11 +7,11 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: OldSchoolPlus
-  m_Shader: {fileID: 4800000, guid: 62e6d0d8d115e8f409a46da7e8d274eb, type: 3}
+  m_Name: NormalMap
+  m_Shader: {fileID: 4800000, guid: e3a8ee0e8bb34734cab49dbedb393033, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 0
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -57,7 +57,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample0:
-        m_Texture: {fileID: 2800000, guid: eabfa8d88fe328f4b952fb81f530c4a4, type: 3}
+        m_Texture: {fileID: 2800000, guid: 07396801d0cc0da42b807d7ee4bf3916, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
@@ -78,18 +78,12 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
-    - _Specular: 1
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
-    - _BaseCol: {r: 0, g: 0.16981131, b: 0.0017648732, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _EnvDownCol: {r: 0.1191118, g: 0.5471698, b: 0, a: 0}
-    - _EnvSideCol: {r: 0.3127408, g: 0.7924528, b: 0.1233535, a: 0}
-    - _EnvUpCol: {r: 0.4968057, g: 0.7169812, b: 0.3551086, a: 0}
-    - _LightCol: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
