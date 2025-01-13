@@ -125,7 +125,7 @@ Shader "NormalMap"
 }
 /*ASEBEGIN
 Version=18500
-234;277;1280;707;2045.613;952.6831;2.201473;True;True
+0;0;1536;795;1430.68;549.4841;1.424485;True;True
 Node;AmplifyShaderEditor.CommentaryNode;32;-902.9768,-584.2313;Inherit;False;1063.033;503.2854;根据屏幕取条纹;4;36;35;22;39;;1,1,1,1;0;0
 Node;AmplifyShaderEditor.WorldNormalVector;2;-718.8301,295.4837;Inherit;False;False;1;0;FLOAT3;0,0,1;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
 Node;AmplifyShaderEditor.WorldSpaceLightDirHlpNode;5;-733.8301,125.4837;Inherit;False;False;1;0;FLOAT;0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
@@ -137,7 +137,6 @@ Node;AmplifyShaderEditor.ScaleAndOffsetNode;36;-415.2806,-458.5945;Inherit;True;
 Node;AmplifyShaderEditor.SimpleMaxOpNode;9;-153.8492,271.5369;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.SamplerNode;22;-149.9309,-290.9081;Inherit;True;Property;_TextureSample0;Texture Sample 0;0;0;Create;True;0;0;False;0;False;-1;None;0c8ba2f243fb4274e8a225003f437ace;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;6;-46.92407,77.6731;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
-Node;AmplifyShaderEditor.RangedFloatNode;19;-941.3418,-36.1778;Inherit;False;Constant;_Float1;Float 1;1;0;Create;True;0;0;False;0;False;1;0;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.StandardSurfaceOutputNode;0;255,-24;Float;False;True;-1;2;ASEMaterialInspector;0;0;Standard;NormalMap;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;Back;0;False;-1;0;False;-1;False;0;False;-1;0;False;-1;False;0;Opaque;0.5;True;True;0;False;Opaque;;Geometry;All;14;all;True;True;True;True;0;False;-1;False;0;False;-1;255;False;-1;255;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;False;2;15;10;25;False;0.5;True;0;0;False;-1;0;False;-1;0;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;0;0,0,0,0;VertexOffset;True;False;Cylindrical;False;Relative;0;;-1;-1;-1;-1;0;False;0;0;False;-1;-1;0;False;-1;0;0;0;False;0.1;False;-1;0;False;-1;False;16;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;13;FLOAT3;0,0,0;False;11;FLOAT3;0,0,0;False;12;FLOAT3;0,0,0;False;14;FLOAT4;0,0,0,0;False;15;FLOAT3;0,0,0;False;0
 WireConnection;4;0;5;0
 WireConnection;4;1;2;0
@@ -151,4 +150,4 @@ WireConnection;6;0;22;1
 WireConnection;6;1;9;0
 WireConnection;0;2;6;0
 ASEEND*/
-//CHKSM=34F2DEAE38E65E28113C17D0FF33C0267C19172C
+//CHKSM=54625605B8353EB2013E8E33957B5F1CD2E5183E
