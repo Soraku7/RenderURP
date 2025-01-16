@@ -1,11 +1,11 @@
-Shader "Unlit/CubCap"
+Shader "Unlit/CubeCap"
 {
     Properties
     {
         _NormalMap ("NormalMap" , 2D) = "bump" {}
-        _Matcap ("MatCap" , 2D) = "gray" {}
+        _CubeMap ("_CubeMap" , 2D) = "gray" {}
         _FresnelPow ("FresnelPow" , Range(0 , 10)) = 1
-        _EnvSpecInt ("EnvSpecInt" , Range(0 , 5)) = 1
+        _EnvSpecInt ("环境镜面反射强度" , Range(0 , 5)) = 1
         
     }
     SubShader

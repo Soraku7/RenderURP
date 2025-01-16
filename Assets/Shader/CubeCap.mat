@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CubCap
+  m_Name: CubeCap
   m_Shader: {fileID: 4800000, guid: 272b092f09255214a8c5a8e03a8df1e7, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
