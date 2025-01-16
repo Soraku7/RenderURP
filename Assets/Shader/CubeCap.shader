@@ -46,7 +46,7 @@ Shader "Unlit/CubeCap"
             };
 
             uniform sampler2D _NormalMap;
-            uniform sampler2D _Matcap;
+            uniform sampler2D _CubeMap;
             uniform float _FresnelPow;
             uniform float _EnvSpecInt;
 
