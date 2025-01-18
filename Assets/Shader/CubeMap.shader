@@ -76,7 +76,7 @@ Shader "Unlit/CubeMap"
                 float vdotn = dot(vDirWS , nDirWS);
 
                 float3 CubeMap = texCUBElod(_CubeMap , float4(vrDirWS , _CubeMapMip));
-                float fressnal = pow(1 - saturate(dot(nDirWS , vDirWS)) , _FresnelPow);
+                float fressnal = pow(1 - vdotn , _FresnelPow);
                 
                 float3 final = CubeMap * fressnal * _EnvSpecInt;
              
