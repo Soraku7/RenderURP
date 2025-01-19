@@ -7,7 +7,7 @@ Shader "Unlit/CubeMap"
         _CubeMapMip ("环境球mip" , Range(0 , 7)) = 0
         _FresnelPow ("FresnelPow" , Range(0 , 10)) = 1
         _EnvSpecInt ("环境镜面反射强度" , Range(0 , 5)) = 1
-        
+        _Occlusion ("Occlusion" , 2D) = "white" {}
     }
     SubShader
     {
@@ -51,6 +51,7 @@ Shader "Unlit/CubeMap"
             uniform float _FresnelPow;
             uniform float _EnvSpecInt;
             uniform float _CubeMapMip;
+            uniform sampler2D _Occlusion;
 
 
             v2f vert (appdata v)
@@ -75,10 +76,11 @@ Shader "Unlit/CubeMap"
 
                 float vdotn = dot(vDirWS , nDirWS);
 
+                float occlusion = tex2D(_Occlusion , i.uv0).r;
                 float3 CubeMap = texCUBElod(_CubeMap , float4(vrDirWS , _CubeMapMip));
                 float fressnal = pow(1 - vdotn , _FresnelPow);
                 
-                float3 final = CubeMap * fressnal * _EnvSpecInt;
+                float3 final = CubeMap * fressnal * _EnvSpecInt * occlusion;
              
                 return float4(final , 1.0);
             }
