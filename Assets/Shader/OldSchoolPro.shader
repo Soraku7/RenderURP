@@ -1,4 +1,4 @@
-Shader "Unlit/OldSchoolPlus"
+Shader "Unlit/OldSchoolPro"
 {
     Properties
     {
