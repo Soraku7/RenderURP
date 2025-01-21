@@ -45,13 +45,16 @@ Shader "Unlit/OldSchoolPro"
                 float4 vertex : POSITION;
                 float3 normalWS : NORMAL;
                 float2 uv0 : TEXCOORD0;
+                float4 tangent : TANGENT;
             };
 
             struct v2f
             {
                 float4 pos : SV_POSITION;
                 float2 uv : TEXCOORD0;
-                float3 normalWS : TEXCOORD2;
+                float3 nDirWS : TEXCOORD2;
+                float3 tDirWS : TEXCOORD3;
+                float3 bDirWS : TEXCOORD4;
                 
                 LIGHTING_COORDS(3,4)
             };
@@ -62,9 +65,11 @@ Shader "Unlit/OldSchoolPro"
             {
                 v2f o = (v2f)0;
                 o.pos = UnityObjectToClipPos(v.vertex);
-                o.normalWS = UnityObjectToWorldNormal(v.normalWS);
-                o.uv = v.uv0;
+                o.nDirWS = UnityObjectToWorldNormal(v.normalWS);
+                o.tDirWS = normalize(mul(unity_ObjectToWorld , float4(v.tangent.xyz , 0.0)).xyz);
+                o.bDirWS = normalize(cross(o.nDirWS , o.tDirWS) * v.tangent.w);
                 
+                o.uv = v.uv0;
                 TRANSFER_VERTEX_TO_FRAGMENT(o)
                 return o;
             }
@@ -72,20 +77,23 @@ Shader "Unlit/OldSchoolPro"
             fixed4 frag (v2f i) : COLOR
             {
                 float shadow = LIGHT_ATTENUATION(i);        // 同样Unity封装好的函数 可取出投影
-                float3 nDirWS = i.normalWS;
+                float3 nDirWS = i.nDirWS;
                 float3 lDir = _WorldSpaceLightPos0.xyz;
                 float3 vDir = normalize(_WorldSpaceCameraPos.xyz - i.pos.xyz);
 
+                float3x3 TBN = float3x3(i.tDirWS , i.bDirWS , i.nDirWS);
+                
+
                 //3Col
-                float upMask = max(0.0 , i.normalWS.y);
-                float downMask = max(0.0 , -i.normalWS.y);
+                float upMask = max(0.0 , i.nDirWS.y);
+                float downMask = max(0.0 , -i.nDirWS.y);
                 float sideMask = 1 - upMask - downMask;
                 float3 envCol = upMask * _EnvUpCol + sideMask * _EnvSideCol + downMask * _EnvDownCol;
                 //Lambort
                 float3 lambort = _BaseColor.rgb * max(0.0 , dot(nDirWS , lDir));
                 //Phong
                 float3 lReflect = normalize(reflect(-lDir , nDirWS));
-                float3 phong = max(0.0 , dot(lReflect , vDir)) * _SpecularPow;
+                float3 phong = pow(max(0.0 , dot(lReflect , vDir)) , _SpecularPow);
                 float occlusion = tex2D(_Occlusion , i.uv).r;
 
                 //直接光照部分

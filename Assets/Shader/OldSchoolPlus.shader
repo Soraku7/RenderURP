@@ -85,7 +85,7 @@ Shader "Unlit/OldSchoolPlus"
                 float3 lambort = _BaseColor.rgb * max(0.0 , dot(nDirWS , lDir));
                 //Phong
                 float3 lReflect = normalize(reflect(-lDir , nDirWS));
-                float3 phong = max(0.0 , dot(lReflect , vDir)) * _SpecularPow;
+                float3 phong = pow(max(0.0 , dot(lReflect , vDir)) , _SpecularPow);
                 float occlusion = tex2D(_Occlusion , i.uv).r;
 
                 //直接光照部分
