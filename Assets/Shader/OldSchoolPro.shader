@@ -2,14 +2,28 @@ Shader "Unlit/OldSchoolPro"
 {
     Properties
     {
-        _Occlusion ("Occlusion", 2D) = "white" {}
+        [Header(Texture)]
+        _MainTex ("Base (RGB)", 2D) = "white" {}
+        _NormalMap ("NormalMap" , 2D) = "white" {}
+        _SpecularMap ("SpecularMap" , 2D) = "white" {}
+        _EmitTex ("环境贴图" , 2D) = "white" {}
+        _CubeMap ("CubeMap" , CUBE) = "white" {}
+        
+        [Header(Diffuse)]
+        _MainCol ("MainCol" , color) = (1.0 , 1.0 , 1.0 , 1.0) 
+        _EnvDiffInt ("环境光反射强度" , Range(0 , 1)) = 0.5
         _EnvUpCol ("EnvUpCol" , color) = (1.0 , 1.0 , 1.0 , 1.0)
         _EnvSideCol ("EnvUpCol" , color) = (1.0 , 1.0 , 1.0 , 1.0)
         _EnvDownCol ("EnvDownCol" , color) = (1.0 , 1.0 , 1.0 , 1.0)
-        _EnvInt ("环境光强度" , Range(0 , 1)) = 0.5
-        _BaseColor ("BaseColor", Color) = (1,1,1,1)
-        _LightColor ("LightColor", Color) = (1,1,1,1)
-        _SpecularPow ("Specular" , Range(10 , 90)) = 30  
+        
+        [Header(Specular)]
+        _SpecularPow ("Specular" , Range(10 , 90)) = 30
+        _EnvSpecInt ("环境光反射强度" , Range(0 , 5)) = 0.5
+        _FresnelPow ("FresnelPow" , Range(0 , 5)) = 1
+        _CubemapMip ("CubemapMip" , Range(0 , 7)) = 1
+        
+        [Header(Emission)]
+        _EmitInt ("EmitInt" , Range(0 , 1)) = 0.5
     }
     SubShader
     {
@@ -31,32 +45,50 @@ Shader "Unlit/OldSchoolPro"
             #pragma multi_compile_fwdbase_fullshadows
             #pragma target 3.0
 
-            uniform sampler2D _Occlusion;
+            //Texture
+            uniform sampler2D _MainTex;
+            uniform sampler2D _NormalMap;
+            uniform sampler2D _SpecularMap;
+            uniform sampler2D _EmitTex;
+            uniform samplerCUBE _CubeMap;
+
+            //Diffuse
             uniform float3 _EnvUpCol;
             uniform float3 _EnvSideCol;
             uniform float3 _EnvDownCol;
             uniform float _EnvInt;
-            uniform float4 _BaseColor;
-            uniform float4 _LightColor;
+            uniform float4 _MainCol;
+            uniform float _EnvDiffInt;
+
+            //Specular
             uniform float _SpecularPow;
+            uniform float _EnvSpecInt;
+            uniform float _FresnelPow;
+            uniform float _CubemapMip;
+
+            //Emission
+            uniform float _EmitInt;
+            
+            
                 
             struct appdata
             {
                 float4 vertex : POSITION;
-                float3 normalWS : NORMAL;
                 float2 uv0 : TEXCOORD0;
-                float4 tangent : TANGENT;
+                float3 normal : NORMAL;
+                float tangent : TANGENT;
             };
 
             struct v2f
             {
                 float4 pos : SV_POSITION;
-                float2 uv : TEXCOORD0;
+                float2 uv0 : TEXCOORD0;
+                float4 posWS : TEXCOORD1;
                 float3 nDirWS : TEXCOORD2;
                 float3 tDirWS : TEXCOORD3;
                 float3 bDirWS : TEXCOORD4;
-                
-                LIGHTING_COORDS(3,4)
+
+                LIGHTING_COORDS(5 , 6)
             };
 
 
@@ -64,46 +96,13 @@ Shader "Unlit/OldSchoolPro"
             v2f vert (appdata v)
             {
                 v2f o = (v2f)0;
-                o.pos = UnityObjectToClipPos(v.vertex);
-                o.nDirWS = UnityObjectToWorldNormal(v.normalWS);
-                o.tDirWS = normalize(mul(unity_ObjectToWorld , float4(v.tangent.xyz , 0.0)).xyz);
-                o.bDirWS = normalize(cross(o.nDirWS , o.tDirWS) * v.tangent.w);
-                
-                o.uv = v.uv0;
-                TRANSFER_VERTEX_TO_FRAGMENT(o)
                 return o;
             }
 
             fixed4 frag (v2f i) : COLOR
             {
-                float shadow = LIGHT_ATTENUATION(i);        // 同样Unity封装好的函数 可取出投影
-                float3 nDirWS = i.nDirWS;
-                float3 lDir = _WorldSpaceLightPos0.xyz;
-                float3 vDir = normalize(_WorldSpaceCameraPos.xyz - i.pos.xyz);
-
-                float3x3 TBN = float3x3(i.tDirWS , i.bDirWS , i.nDirWS);
-                
-
-                //3Col
-                float upMask = max(0.0 , i.nDirWS.y);
-                float downMask = max(0.0 , -i.nDirWS.y);
-                float sideMask = 1 - upMask - downMask;
-                float3 envCol = upMask * _EnvUpCol + sideMask * _EnvSideCol + downMask * _EnvDownCol;
-                //Lambort
-                float3 lambort = _BaseColor.rgb * max(0.0 , dot(nDirWS , lDir));
-                //Phong
-                float3 lReflect = normalize(reflect(-lDir , nDirWS));
-                float3 phong = pow(max(0.0 , dot(lReflect , vDir)) , _SpecularPow);
-                float occlusion = tex2D(_Occlusion , i.uv).r;
-
-                //直接光照部分
-                float3 dirLighting = (_BaseColor * lambort + phong) * _LightColor * shadow;
-                //间接光照部分
-                float3 envLighting = envCol * occlusion * _EnvInt * occlusion;
-                
-                float3 final = dirLighting + envLighting;
-                
-                return float4(final.x, final.y, final.z, 1.0);  
+              
+                return float4(1.0, 1.0, 1.0, 1.0);  
             }
             ENDCG
         }
