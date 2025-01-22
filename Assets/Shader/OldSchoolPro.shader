@@ -76,7 +76,7 @@ Shader "Unlit/OldSchoolPro"
                 float4 vertex : POSITION;
                 float2 uv0 : TEXCOORD0;
                 float3 normal : NORMAL;
-                float tangent : TANGENT;
+                float4 tangent : TANGENT;
             };
 
             struct v2f
@@ -96,6 +96,15 @@ Shader "Unlit/OldSchoolPro"
             v2f vert (appdata v)
             {
                 v2f o = (v2f)0;
+                o.pos = UnityObjectToClipPos(v.vertex);
+                o.uv0 = v.uv0;
+                o.posWS = mul(unity_ObjectToWorld , v.vertex);
+                o.nDirWS = UnityObjectToWorldNormal(v.normal);
+                o.tDirWS = UnityObjectToWorldDir(v.tangent.xyz);
+                o.bDirWS = cross(o.nDirWS , o.tDirWS) * v.tangent.w;
+
+                //投影相关
+                TRANSFER_VERTEX_TO_FRAGMENT(o);
                 return o;
             }
 
