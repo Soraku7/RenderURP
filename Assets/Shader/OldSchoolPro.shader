@@ -110,7 +110,9 @@ Shader "Unlit/OldSchoolPro"
 
             fixed4 frag (v2f i) : COLOR
             {
-              
+                
+
+                
                 return float4(1.0, 1.0, 1.0, 1.0);  
             }
             ENDCG
