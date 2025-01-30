@@ -5,8 +5,8 @@ Shader "Unlit/OldSchoolPro"
         [Header(Texture)]
         _MainTex ("RGB基础颜色 A环境遮罩", 2D) = "white" {}
         _NormalMap ("NormalMap" , 2D) = "white" {}
-        _SpecularMap ("SpecularMap" , 2D) = "white" {}
-        _EmitTex ("环境贴图" , 2D) = "white" {}
+        _SpecularMap ("RGB高光颜色 A高光次幂" , 2D) = "white" {}
+        _EmitTex ("环境贴图" , 2D) = "black" {}
         _CubeMap ("CubeMap" , CUBE) = "white" {}
         
         [Header(Diffuse)]
@@ -23,7 +23,7 @@ Shader "Unlit/OldSchoolPro"
         _CubemapMip ("CubemapMip" , Range(0 , 7)) = 1
         
         [Header(Emission)]
-        _EmitInt ("EmitInt" , Range(0 , 1)) = 0.5
+        _EmitInt ("EmitInt" , Range(1 , 10)) = 1
     }
     SubShader
     {
@@ -125,22 +125,32 @@ Shader "Unlit/OldSchoolPro"
                 float4 var_SpecularMap = tex2D(_SpecularMap , i.uv0);
                 float3 var_EmitTex = tex2D(_EmitTex , i.uv0).rgb;
                 float3 var_CubeMap = texCUBE(_CubeMap , float4(vDirWS , lerp(_CubemapMip , 0.0 , var_SpecularMap.a))).rgb;
-                
+
+                //光源漫反射
                 float3 baseCol = var_MainTedx.rgb * _MainCol.rgb;
                 float lambort = max(0.0 , ndotl);
-                float specCol = var_SpecularMap.rgb;
-                float phong = pow(max(0.0 , vdotr) , _SpecularPow);
-                float shadow = LIGHT_ATTENUATION(i);
-                float3 dirLighting = (baseCol * lambort + specCol * phong) * shadow;
 
+                //光源镜面反射
+                float specCol = var_SpecularMap.rgb;
+                float specPow = lerp(1 , _SpecularPow , var_SpecularMap.a);
+                float phong = pow(max(0.0 , vdotr) , specPow);
+                
+                float shadow = LIGHT_ATTENUATION(i);
+                float3 dirLighting = (baseCol * lambort + specCol * phong) * _LightColor0 *shadow;
+
+                //环境漫反射
                 float upMask = max(0.0 , nDirWS.g);
                 float downMask = max(0.0 , -nDirWS.g);
                 float sideMask = 1.0 - upMask - downMask;
                 float3 envCol = _EnvUpCol * upMask + _EnvSideCol * sideMask + _EnvDownCol * downMask;
+
+                //环境镜面反射
                 float fresnal = pow(max(0.0 , 1.0 - vdotn) , _FresnelPow);
+                
                 float occlusion = var_MainTedx.a;
                 float3 envLighting = (baseCol * envCol  * _EnvDiffInt + var_CubeMap * fresnal * _EnvSpecInt * var_SpecularMap.a) * occlusion;
 
+                //自发光
                 float3 emission = var_EmitTex * _EmitInt;
 
                 float3 final = dirLighting + envLighting + emission;

@@ -198,6 +198,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3822367129346656993, guid: f64d468d657668f48b8ab6261a502fe2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 620e0fd96d0d9a7449915b18dc73462a, type: 2}
     - target: {fileID: -927199367670048503, guid: f64d468d657668f48b8ab6261a502fe2, type: 3}
       propertyPath: m_Name
       value: OldSchoolPro
@@ -222,6 +226,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: db844a6b4e8f76142a43bb00c2373cae, type: 2}
+    - target: {fileID: 6523291298449368552, guid: f64d468d657668f48b8ab6261a502fe2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: be3babd36632ea44f8ce97a51653620e, type: 2}
     - target: {fileID: 8097724509480400316, guid: f64d468d657668f48b8ab6261a502fe2, type: 3}
       propertyPath: m_LocalScale.x
       value: 10

@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: OldSchoolPro
+  m_Name: OldSchoolPro_Head
   m_Shader: {fileID: 4800000, guid: ebd3043d3880f75498a271cfbba35a9b, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -21,7 +21,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _CubeMap:
-        m_Texture: {fileID: 8900000, guid: 98e16bab30c1e6c4eae6271a38beb2fe, type: 3}
+        m_Texture: {fileID: 8900000, guid: 264db03ada384484b9e54dba530ae792, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmitTex:
@@ -47,11 +47,11 @@ Material:
     m_Ints: []
     m_Floats:
     - _CubemapMip: 1
-    - _EmitInt: 0.362
+    - _EmitInt: 2.6
     - _EnvDiffInt: 0.411
-    - _EnvSpecInt: 0.72
-    - _FresnelPow: 1
-    - _SpecularPow: 5.9
+    - _EnvSpecInt: 0.94
+    - _FresnelPow: 1.28
+    - _SpecularPow: 10.3
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _EnvDownCol: {r: 1, g: 0.7260653, b: 0, a: 1}
