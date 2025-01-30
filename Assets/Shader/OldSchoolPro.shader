@@ -3,7 +3,7 @@ Shader "Unlit/OldSchoolPro"
     Properties
     {
         [Header(Texture)]
-        _MainTex ("Base (RGB)", 2D) = "white" {}
+        _MainTex ("RGB基础颜色 A环境遮罩", 2D) = "white" {}
         _NormalMap ("NormalMap" , 2D) = "white" {}
         _SpecularMap ("SpecularMap" , 2D) = "white" {}
         _EmitTex ("环境贴图" , 2D) = "white" {}
@@ -11,14 +11,14 @@ Shader "Unlit/OldSchoolPro"
         
         [Header(Diffuse)]
         _MainCol ("MainCol" , color) = (1.0 , 1.0 , 1.0 , 1.0) 
-        _EnvDiffInt ("环境光反射强度" , Range(0 , 1)) = 0.5
+        _EnvDiffInt ("环境光漫反射强度" , Range(0 , 1)) = 0.5
         _EnvUpCol ("EnvUpCol" , color) = (1.0 , 1.0 , 1.0 , 1.0)
         _EnvSideCol ("EnvUpCol" , color) = (1.0 , 1.0 , 1.0 , 1.0)
         _EnvDownCol ("EnvDownCol" , color) = (1.0 , 1.0 , 1.0 , 1.0)
         
         [Header(Specular)]
-        _SpecularPow ("Specular" , Range(10 , 90)) = 30
-        _EnvSpecInt ("环境光反射强度" , Range(0 , 5)) = 0.5
+        _SpecularPow ("Specular" , Range(1 , 90)) = 30
+        _EnvSpecInt ("环境光镜面反射强度" , Range(0 , 5)) = 0.5
         _FresnelPow ("FresnelPow" , Range(0 , 5)) = 1
         _CubemapMip ("CubemapMip" , Range(0 , 7)) = 1
         
@@ -110,10 +110,42 @@ Shader "Unlit/OldSchoolPro"
 
             fixed4 frag (v2f i) : COLOR
             {
-                
+                float3 nDirTS = UnpackNormal(tex2D(_NormalMap , i.uv0)).rgb;
+                float3x3 TBN = float3x3(i.tDirWS , i.bDirWS , i.nDirWS);
+                float3 nDirWS = mul(TBN , nDirTS);
+                float3 vDirWS = normalize(_WorldSpaceCameraPos - i.posWS).xyz;
+                float3 lDirWS = _WorldSpaceLightPos0.xyz;
+                float3 lrDirWS = reflect(-lDirWS , nDirWS);
 
+                float ndotl = dot(nDirWS , lDirWS);
+                float vdotr = dot(vDirWS , lrDirWS);
+                float vdotn = dot(vDirWS , nDirWS);
+
+                float4 var_MainTedx = tex2D(_MainTex , i.uv0);
+                float4 var_SpecularMap = tex2D(_SpecularMap , i.uv0);
+                float3 var_EmitTex = tex2D(_EmitTex , i.uv0).rgb;
+                float3 var_CubeMap = texCUBE(_CubeMap , float4(vDirWS , lerp(_CubemapMip , 0.0 , var_SpecularMap.a))).rgb;
                 
-                return float4(1.0, 1.0, 1.0, 1.0);  
+                float3 baseCol = var_MainTedx.rgb * _MainCol.rgb;
+                float lambort = max(0.0 , ndotl);
+                float specCol = var_SpecularMap.rgb;
+                float phong = pow(max(0.0 , vdotr) , _SpecularPow);
+                float shadow = LIGHT_ATTENUATION(i);
+                float3 dirLighting = (baseCol * lambort + specCol * phong) * shadow;
+
+                float upMask = max(0.0 , nDirWS.g);
+                float downMask = max(0.0 , -nDirWS.g);
+                float sideMask = 1.0 - upMask - downMask;
+                float3 envCol = _EnvUpCol * upMask + _EnvSideCol * sideMask + _EnvDownCol * downMask;
+                float fresnal = pow(max(0.0 , 1.0 - vdotn) , _FresnelPow);
+                float occlusion = var_MainTedx.a;
+                float3 envLighting = (baseCol * envCol  * _EnvDiffInt + var_CubeMap * fresnal * _EnvSpecInt * var_SpecularMap.a) * occlusion;
+
+                float3 emission = var_EmitTex * _EmitInt;
+
+                float3 final = dirLighting + envLighting + emission;
+                
+                return float4(final, 1.0);  
             }
             ENDCG
         }
