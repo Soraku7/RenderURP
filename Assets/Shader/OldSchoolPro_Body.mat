@@ -46,12 +46,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _CubemapMip: 1
-    - _EmitInt: 2.6
-    - _EnvDiffInt: 0.294
-    - _EnvSpecInt: 1
-    - _FresnelPow: 2.05
-    - _SpecularPow: 9.8
+    - _CubemapMip: 1.71
+    - _EmitInt: 3
+    - _EnvDiffInt: 0.515
+    - _EnvSpecInt: 1.86
+    - _FresnelPow: 3.29
+    - _SpecularPow: 24.5
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _EnvDownCol: {r: 1, g: 0.7260653, b: 0, a: 1}

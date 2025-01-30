@@ -6,7 +6,7 @@ Shader "Unlit/OldSchoolPro"
         _MainTex ("RGB基础颜色 A环境遮罩", 2D) = "white" {}
         _NormalMap ("NormalMap" , 2D) = "white" {}
         _SpecularMap ("RGB高光颜色 A高光次幂" , 2D) = "white" {}
-        _EmitTex ("环境贴图" , 2D) = "black" {}
+        _EmitTex ("自发光贴图" , 2D) = "black" {}
         _CubeMap ("CubeMap" , CUBE) = "white" {}
         
         [Header(Diffuse)]
