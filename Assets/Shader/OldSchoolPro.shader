@@ -114,6 +114,7 @@ Shader "Unlit/OldSchoolPro"
                 float3x3 TBN = float3x3(i.tDirWS , i.bDirWS , i.nDirWS);
                 float3 nDirWS = mul(TBN , nDirTS);
                 float3 vDirWS = normalize(_WorldSpaceCameraPos - i.posWS).xyz;
+                float3 vrDirWS = reflect(-vDirWS , nDirWS);
                 float3 lDirWS = _WorldSpaceLightPos0.xyz;
                 float3 lrDirWS = reflect(-lDirWS , nDirWS);
 
@@ -124,7 +125,7 @@ Shader "Unlit/OldSchoolPro"
                 float4 var_MainTedx = tex2D(_MainTex , i.uv0);
                 float4 var_SpecularMap = tex2D(_SpecularMap , i.uv0);
                 float3 var_EmitTex = tex2D(_EmitTex , i.uv0).rgb;
-                float3 var_CubeMap = texCUBE(_CubeMap , float4(vDirWS , lerp(_CubemapMip , 0.0 , var_SpecularMap.a))).rgb;
+                float3 var_CubeMap = texCUBE(_CubeMap , float4(vrDirWS , lerp(_CubemapMip , 0.0 , var_SpecularMap.a))).rgb;
 
                 //光源漫反射
                 float3 baseCol = var_MainTedx.rgb * _MainCol.rgb;
