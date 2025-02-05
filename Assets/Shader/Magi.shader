@@ -11,6 +11,9 @@ Shader "Unlit/Dota2/Magi"
         _DiffWarpTex ("颜色Warp图" , 2D) = "black" {}
         _FressnalMap ("菲涅尔Warp图" , 2D) = "black" {}
         _CubeMap ("CubeMap" , CUBE) = "_Skybox" {}
+        
+        [Header(Light)]
+        _LightColor ("LightColor" , Color) = (1 , 1 , 1 , 1)
     }
     SubShader
     {
@@ -41,6 +44,9 @@ Shader "Unlit/Dota2/Magi"
             uniform sampler2D _DiffWarpTex;
             uniform sampler2D _FressnalMap;
             uniform samplerCUBE _CubeMap;
+
+            //Light
+            uniform half3 _LightColor;
             
             struct appdata
             {
@@ -100,9 +106,37 @@ Shader "Unlit/Dota2/Magi"
                 half4 var_NormalMap = tex2D(_NormalMap , i.uv0);
                 half var_MatlnessMask = tex2D(_MatlnessMask , i.uv0).r;
                 half var_EmissionMask = tex2D(_EmissionMask , i.uv0).r;
+                half3 var_FressWarpTex = tex2D(_FressnalMap , ndotv);
                 half3 var_Cubemap = texCUBE(_CubeMap , float4(vrDirWS , lerp(8.0 , 0.0 , var_MaskTex.a))).rgb;
+
+                half3 baseCol = var_MainTex.rgb;
+                half opacity = var_MainTex.a;
+                half specInt = var_MaskTex.r;
+                //轮廓光强度
+                half rimInt = var_MaskTex.g;
+                half specTint = var_MaskTex.b;
+                half specPow = var_MaskTex.a;
+                half matellic = var_MatlnessMask;
+                half emitInt = var_EmissionMask;
+                half3 envCube = var_Cubemap;
+                half shadow = SHADOW_ATTENUATION(i);
                 
-                return float4(1.0 , 1.0 , 1.0, 1.0);  
+                half3 diffCol = lerp(baseCol , half3(0.0 , 0.0 , 0.0) , matellic);
+                half3 specCol = lerp(baseCol , half3(0.3 , 0.3 , 0.3) , specTint);
+
+                half3 fresnel = lerp(var_FressWarpTex , half3(0.0 , 0.0 , 0.0) , matellic);
+
+                //R 菲涅尔颜色 G 轮廓光菲涅尔 B 高光菲涅尔   
+                half fresnelCol = fresnel.r;
+                half fresnelRim = fresnel.g;
+                half fresnelSpec = fresnel.b;
+
+                //光源漫反射
+                half halflambort = ndotl * 0.5 + 0.5;
+                half3 var_DiffWarpTex = tex2D(_DiffWarpTex , half2(halflambort , 0.2)).rgb;
+                half3 dirDiff = diffCol * var_DiffWarpTex * _LightColor;
+                
+                return float4(dirDiff , 1.0);  
             }
             ENDCG
         }
