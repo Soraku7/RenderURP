@@ -14,6 +14,23 @@ Shader "Unlit/Dota2/Magi"
         
         [Header(Light)]
         _LightColor ("LightColor" , Color) = (1 , 1 , 1 , 1)
+        
+        [Header(Specular)]
+        _SpecPow ("高光次幂" , range(0.0 , 30.0)) = 5.0
+        _SpecInt ("高光强度" , range(0.0 , 10.0)) = 5.0
+        
+        [Header(Environment)]
+        _EnvColor ("环境光颜色" , Color) = (1 , 1 , 1 , 1)
+        _EnvSpecInt ("环境高光强度" , range(0.0 , 100.0)) = 50.0
+        
+        [Header(RimLight)]
+        _RimColor ("边缘光颜色" , Color) = (1 , 1 , 1 , 1)
+        _RimInt ("边缘光强度" , range(0.0 , 50.0)) = 1.0
+        
+        [Header(Emit)]
+        _EmitInt ("自发光强度" , range(0.0 , 10.0)) = 1.0
+        
+        [HideInInspector] _Cutoff ("Alpha Cutoff" , Range(0.0 , 1.0)) = 0.5
     }
     SubShader
     {
@@ -26,6 +43,7 @@ Shader "Unlit/Dota2/Magi"
             Tags{
                 "LightMode" = "ForwardBase"
             }
+            Cull Off
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
@@ -47,6 +65,24 @@ Shader "Unlit/Dota2/Magi"
 
             //Light
             uniform half3 _LightColor;
+
+            //Specular
+            uniform half _SpecPow;
+            uniform half _SpecInt;
+
+            //Environment
+            uniform half3 _EnvColor;
+            uniform half _EnvSpecInt;
+
+            //RimLight
+            uniform half3 _RimColor;
+            uniform half _RimInt;
+
+            //Emit
+            uniform half _EmitInt;
+
+            //Other
+            uniform half _Cutoff;
             
             struct appdata
             {
@@ -103,7 +139,6 @@ Shader "Unlit/Dota2/Magi"
                 //纹理
                 half4 var_MainTex = tex2D(_MainTex , i.uv0);
                 half4 var_MaskTex = tex2D(_MaskTex , i.uv0);
-                half4 var_NormalMap = tex2D(_NormalMap , i.uv0);
                 half var_MatlnessMask = tex2D(_MatlnessMask , i.uv0).r;
                 half var_EmissionMask = tex2D(_EmissionMask , i.uv0).r;
                 half3 var_FressWarpTex = tex2D(_FressnalMap , ndotv);
@@ -135,8 +170,32 @@ Shader "Unlit/Dota2/Magi"
                 half halflambort = ndotl * 0.5 + 0.5;
                 half3 var_DiffWarpTex = tex2D(_DiffWarpTex , half2(halflambort , 0.2)).rgb;
                 half3 dirDiff = diffCol * var_DiffWarpTex * _LightColor;
+
+                //光源镜面反射
+                half phong = pow(max(0.0 , vdotr) , specPow);
+                half spec = phong * max(0.0 , ndotl);
+                half3 dirSpec = max(spec , fresnelSpec) * specInt;
+
+                //环境漫反射
+                half3 envDiff = diffCol * _EnvColor;
+
+                //环境镜面反射
+                half reflectInt = max(fresnelSpec , matellic) * specInt;
+                half3 envSpec = specCol  * reflectInt * envCube * _EnvSpecInt;
+
+                //轮廓光
+                half3 rimLight = _RimColor * fresnelRim * rimInt * max(0.0 , nDirWS.g);
+
+                //自发光
+                half3 emission = diffCol * emitInt * _EmitInt;
+
+                half3 finalColor = (dirSpec + dirDiff) * shadow + (envDiff + envSpec) + rimLight + emission;
+
+                //透明剪切
+                clip(opacity - _Cutoff);
                 
-                return float4(dirDiff , 1.0);  
+                return float4(finalColor, 1.0);
+                // return float4(shadow , shadow , shadow , 1.0);
             }
             ENDCG
         }

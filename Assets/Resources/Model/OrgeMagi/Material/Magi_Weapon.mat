@@ -40,12 +40,24 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _DiffWarpTex:
+        m_Texture: {fileID: 2800000, guid: 4bc6ce34de3c05b4cac98ebc02ade654, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _EmissionMask:
+        m_Texture: {fileID: 2800000, guid: f1a2556a86767b441b1dad5fce6e4ff2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _EmitTex:
         m_Texture: {fileID: 2800000, guid: f1a2556a86767b441b1dad5fce6e4ff2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FressnalMap:
+        m_Texture: {fileID: 2800000, guid: 79f1a541c90b14a44903352e018ec2b8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -53,7 +65,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 1f03fa8271547d6449ca962d80e25489, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MatlnessMask:
+        m_Texture: {fileID: 2800000, guid: bd5c3fdaec01b2d4c874afc6d8104c89, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -86,7 +102,7 @@ Material:
     - _DstBlend: 0
     - _EmitInt: 4.33
     - _EnvDiffInt: 0.5
-    - _EnvSpecInt: 0.5
+    - _EnvSpecInt: 100
     - _FresnelPow: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -95,7 +111,10 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _RimInt: 5
     - _SmoothnessTextureChannel: 0
+    - _SpecInt: 4.06
+    - _SpecPow: 3.7
     - _SpecularHighlights: 1
     - _SpecularPow: 90
     - _SrcBlend: 1
@@ -105,8 +124,11 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmitCol: {r: 0.6037736, g: 0.5752489, b: 0, a: 1}
+    - _EnvColor: {r: 1, g: 1, b: 1, a: 1}
     - _EnvDownCol: {r: 1, g: 1, b: 1, a: 1}
     - _EnvSideCol: {r: 1, g: 1, b: 1, a: 1}
     - _EnvUpCol: {r: 1, g: 1, b: 1, a: 1}
+    - _LightColor: {r: 1, g: 1, b: 1, a: 1}
     - _MainCol: {r: 1, g: 1, b: 1, a: 1}
+    - _RimColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
