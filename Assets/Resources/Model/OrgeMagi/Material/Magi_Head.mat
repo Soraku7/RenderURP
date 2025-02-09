@@ -102,7 +102,7 @@ Material:
     - _DstBlend: 0
     - _EmitInt: 1.96
     - _EnvDiffInt: 0.5
-    - _EnvSpecInt: 0.5
+    - _EnvSpecInt: 26.9
     - _FresnelPow: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5

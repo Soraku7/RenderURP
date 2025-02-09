@@ -100,9 +100,9 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _EmitInt: 1.24
+    - _EmitInt: 0
     - _EnvDiffInt: 0.5
-    - _EnvSpecInt: 100
+    - _EnvSpecInt: 93.4
     - _FresnelPow: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -111,7 +111,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _RimInt: 0.44
+    - _RimInt: 4.9
     - _SmoothnessTextureChannel: 0
     - _SpecInt: 3.57
     - _SpecPow: 6.6
@@ -124,11 +124,11 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmitCol: {r: 1, g: 1, b: 1, a: 1}
-    - _EnvColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EnvColor: {r: 0.5566038, g: 0.5566038, b: 0.5566038, a: 1}
     - _EnvDownCol: {r: 1, g: 1, b: 1, a: 1}
     - _EnvSideCol: {r: 1, g: 1, b: 1, a: 1}
     - _EnvUpCol: {r: 1, g: 1, b: 1, a: 1}
-    - _LightColor: {r: 0.9528302, g: 0.9528302, b: 0.9528302, a: 1}
+    - _LightColor: {r: 1, g: 1, b: 1, a: 1}
     - _MainCol: {r: 1, g: 1, b: 1, a: 1}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
