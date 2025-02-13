@@ -72,8 +72,8 @@
             fixed4 frag (v2f i) : SV_Target
             {
                 half3 var_WarpTex = tex2D(_WarpTex, i.uv1);
-                half2 uvBias = (var_WarpTex - 0.5) * _WarpInt;
-                half2 uv0 = i.uv0 + uvBias;
+                float2 uvBias = (var_WarpTex.rg - 0.5) * _WarpInt;
+                float2 uv0 = i.uv0 + uvBias;
                 half4 var_MainTex = tex2D(_MainTex, uv0);
 
                 half3 finalRGB = var_MainTex.rgb;
@@ -87,5 +87,4 @@
             ENDCG
         }
     }
-    FallBack "Diffuse"	
 }
