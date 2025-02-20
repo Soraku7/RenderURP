@@ -65,7 +65,7 @@
             {
                 v2f o = (v2f)0;
                 o.pos = UnityObjectToClipPos(v.vertex);
-                o.uv = TRANSFORM_TEX(v.uv, _MainTex);
+                o.uv = v.uv;
                 o.grabPos = ComputeGrabScreenPos(o.pos);
                 return o;
             }
@@ -74,12 +74,13 @@
             {
                 half4 var_MainTex = tex2D(_MainTex, i.uv);
 
-                i.grabPos.xy += (var_MainTex.r - _WarpMidVal) * _WarpInt * _Opacity;
+                //扰动背景UV
+                i.grabPos.xy += (var_MainTex.b - _WarpMidVal) * _WarpInt * _Opacity;
 
-                half3 var_BGTex = tex2D(_BackgroundTexture , i.grabPos).rgb;
+                half3 var_BGTex = tex2Dproj(_BackgroundTexture , i.grabPos).rgb;
 
-                half3 finalColor = var_BGTex * var_MainTex.rgb;
-                return half4(finalColor, var_MainTex.a);
+                half3 finalRGB = lerp(1.0, var_MainTex.rgb, _Opacity) * var_BGTex;
+                return half4(finalRGB * var_MainTex.a, var_MainTex.a);
             }
             ENDCG
         }
