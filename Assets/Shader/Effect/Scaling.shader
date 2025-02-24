@@ -4,7 +4,7 @@
     {
         _MainTex ("Texture", 2D) = "white" {}
         _Opacity ("透明度", Range(0,1)) = 1
-        _ScalingRange ("缩放范围", Range(0,3)) = 1
+        _ScalingRange ("缩放范围", Range(0,1)) = 1
         _ScalingSpeed ("缩放速度", Range(0,3)) = 0.5
     }
     SubShader
