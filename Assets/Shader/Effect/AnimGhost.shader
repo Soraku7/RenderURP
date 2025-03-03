@@ -1,4 +1,4 @@
-﻿Shader "AP01/L19/AnimGhost" {
+﻿Shader "Effect/AnimGhost" {
     Properties {
         _MainTex        ("RGB：颜色 A：透贴", 2d) = "gray"{}
         _Opacity        ("透明度", range(0, 1)) = 0.5 
