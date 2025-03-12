@@ -2,20 +2,24 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: OldSchoolPlus
   m_Shader: {fileID: 4800000, guid: 62e6d0d8d115e8f409a46da7e8d274eb, type: 3}
-  m_ShaderKeywords: 
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -63,7 +67,9 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
+    - _AlphaCutoff: 0.5
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
@@ -83,11 +89,12 @@ Material:
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
-    - _BaseCol: {r: 0, g: 0.16981131, b: 0.0017648732, a: 0}
+    - _BaseCol: {r: 0, g: 0.16981128, b: 0.0017648733, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _EnvDownCol: {r: 0.1191118, g: 0.5471698, b: 0, a: 0}
-    - _EnvSideCol: {r: 0.3127408, g: 0.7924528, b: 0.1233535, a: 0}
-    - _EnvUpCol: {r: 0.4968057, g: 0.7169812, b: 0.3551086, a: 0}
+    - _EnvDownCol: {r: 0.11911177, g: 0.5471698, b: 0, a: 0}
+    - _EnvSideCol: {r: 0.31274077, g: 0.7924528, b: 0.123353474, a: 0}
+    - _EnvUpCol: {r: 0.4968056, g: 0.7169812, b: 0.35510856, a: 0}
     - _LightCol: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1

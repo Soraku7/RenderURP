@@ -18,7 +18,7 @@ Shader "Effect/AC"
         {
             Name "FORWARD"
             Tags {
-                "LightMode" = "ForwardBase"
+                "LightMode" = "UniversalForward"
             }
             Cull Off
             

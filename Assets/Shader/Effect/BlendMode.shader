@@ -25,7 +25,7 @@
         {
             Name "FORWARD"
             Tags {
-                "LightMode" = "ForwardBase"
+                "LightMode" = "UniversalForward"
             }
             BlendOp [_BlendOp]
             Blend [_BlendSrc] [_BlendDst]

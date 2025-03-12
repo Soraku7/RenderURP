@@ -18,7 +18,7 @@
         {
             Name "FORWARD"
             Tags {
-                "LightMode" = "ForwardBase"
+                "LightMode" = "UniversalForward"
             }
             Blend One One
             

@@ -23,7 +23,7 @@
         {
             Name "FORWARD_AB"
             Tags {
-                "LightMode" = "ForwardBase"
+                "LightMode" = "UniversalForward"
             }
             Blend One OneMinusSrcAlpha
             
@@ -75,7 +75,7 @@
         {
             Name "FORWARD_AD"
             Tags {
-                "LightMode" = "ForwardBase"
+                "LightMode" = "UniversalForward"
             }
             Blend One One
             
