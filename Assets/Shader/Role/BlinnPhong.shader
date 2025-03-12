@@ -9,7 +9,7 @@ Shader "Shader/Blinn-Phong" {
         Pass {
             Name "FORWARD"
             Tags {
-                "LightMode"="ForwardBase"
+                "LightMode"="UniversalForward"
             }
             
             

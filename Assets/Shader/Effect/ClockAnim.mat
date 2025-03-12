@@ -101,14 +101,14 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _HourHandAngle: 76
+    - _HourHandAngle: 82
     - _Metallic: 0
-    - _MinuteHandAngle: 192
+    - _MinuteHandAngle: 264
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _RotateOffset: 3.21
-    - _SecondHandAngle: 168
+    - _SecondHandAngle: 18
     - _SmoothnessTextureChannel: 0
     - _SpecPow: 30
     - _SpecularHighlights: 1

@@ -9,7 +9,7 @@ Shader "Unlit/Hatch" {
     }
     SubShader {
         Tags {
-            "LightMode" = "ForwardBase"
+            "LightMode" = "UniversalForward"
             "RenderType"="Opaque"
             "Queue" = "Geometry"
         }

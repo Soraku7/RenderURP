@@ -19,7 +19,7 @@ Shader "Unlit/LambortPlus"
 
         Pass
         {
-            tags{"LightMode" = "ForwardBase"}
+            tags{"LightMode" = "UniversalForward"}
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag

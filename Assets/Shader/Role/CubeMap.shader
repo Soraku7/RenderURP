@@ -18,7 +18,7 @@ Shader "Unlit/CubeMap"
         {
             Name "FORWARD"
             Tags{
-                "LightMode" = "ForwardBase"
+                "LightMode" = "UniversalForward"
             }
             CGPROGRAM
             #pragma vertex vert

@@ -14,7 +14,7 @@ Shader "Unlit/Jade"
     {
         Tags { 
             "RenderType"="Opaque" 
-            "LightMode" = "ForwardBase"
+            "LightMode" = "UniversalForward"
             
         }
         LOD 100

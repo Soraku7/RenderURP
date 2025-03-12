@@ -41,7 +41,7 @@ Shader "Unlit/Dota2/Magi"
         {
             Name "FORWARD"
             Tags{
-                "LightMode" = "ForwardBase"
+                "LightMode" = "UniversalForward"
             }
             Cull Off
             CGPROGRAM
