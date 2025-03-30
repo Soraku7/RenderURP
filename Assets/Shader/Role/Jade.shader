@@ -83,7 +83,7 @@ Shader "Unlit/Jade"
                 //超过Threshold的值返回halfLambort 否则返回1
                 fixed highlight1 = step(_Threshold1 , halfLambort1);
 
-                //Hightlight1
+                //Hightlight2
                 float3 lDir2 = normalize(lDir + _Offset2);
                 //saturate 将数值归为0到1
                 fixed halfLambort2 = saturate(dot(nDir , lDir2));

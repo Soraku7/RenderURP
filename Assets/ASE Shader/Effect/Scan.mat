@@ -134,8 +134,8 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _InnerCol: {r: 0, g: 4, b: 3.5191498, a: 0}
-    - _RimCol: {r: 0, g: 0.14183426, b: 4, a: 0}
+    - _InnerCol: {r: 0, g: 4, b: 3.51915, a: 0}
+    - _RimCol: {r: 0, g: 0.1418343, b: 4, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Speed: {r: 0, g: 1.19, b: 0, a: 0}
   m_BuildTextureStacks: []
