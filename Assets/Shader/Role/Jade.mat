@@ -9,6 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Jade
   m_Shader: {fileID: 4800000, guid: fde213daf4310a14f82fdc7d78ca19f9, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -17,6 +19,7 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -76,8 +79,8 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Threshold1: 0.993
-    - _Threshold2: 0.955
+    - _Threshold1: 1
+    - _Threshold2: 1.144
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
@@ -88,3 +91,4 @@ Material:
     - _Offset1: {r: 0, g: -0.33, b: 0, a: 0}
     - _Offset2: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1
