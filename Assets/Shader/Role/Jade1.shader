@@ -2,9 +2,10 @@ Shader "URP/Jade1"
 {
     Properties
     {
-        _Diffuse ("Diffuse", Color) = (1, 1, 1, 1)
-        _Specular ("Specular", Color) = (1, 1, 1, 1)
-        _Gloss ("Gloss", Range(8.0, 256)) = 20
+        _BackLightCol("BackLightCol" , Color) = (1 , 1 , 1, 1) 
+        _Disort ("BackLight Disort", Range(0 , 1)) = 0.1
+        _Power ("BackLight Power", Range(0 , 5)) = 1
+        _Scale ("BackLight Scale", Range(0 , 5)) = 1
         [Toggle(_AdditionalLights)] _AddLights ("AddLights", Float) = 1
     }
     SubShader
@@ -16,8 +17,6 @@ Shader "URP/Jade1"
         
         CBUFFER_START(UnityPerMaterial)
         float4 _Diffuse;
-        float4 _Specular;
-        float _Gloss;
         CBUFFER_END
         ENDHLSL
         
@@ -44,7 +43,7 @@ Shader "URP/Jade1"
             struct v2f
             {
                 float4 pos: SV_POSITION;
-                float3 positionWS: TEXCOORD0;
+                float3 posWS: TEXCOORD0;
                 float3 normal: TEXCOORD1;
             };
             
@@ -55,42 +54,46 @@ Shader "URP/Jade1"
                 // 获取不同空间下坐标信息
                 VertexPositionInputs positionInputs = GetVertexPositionInputs(v.pos.xyz);
                 o.pos = positionInputs.positionCS;
-                o.positionWS = positionInputs.positionWS;
+                o.posWS = positionInputs.positionWS;
                 
                 o.normal = TransformObjectToWorldNormal(v.normal);
                 
                 
                 return o;
             }
-            
-            /// lightColor：光源颜色
-            /// lightDirectionWS：世界空间下光线方向
-            /// lightAttenuation：光照衰减
-            /// normalWS：世界空间下法线
-            /// viewDirectionWS：世界空间下视角方向
-            half3 LightingBased(half3 lightColor, half3 lightDirectionWS, half lightAttenuation, half3 normalWS)
-            {
-                // 兰伯特漫反射计算
-                half NdotL = saturate(dot(normalWS, lightDirectionWS));
-                half3 radiance = lightColor * (lightAttenuation * NdotL) * _Diffuse.rgb;
-                
-                
-                return radiance;
-            }
 
-            half3 LightingBased(Light light, half3 normalWS)
+            uniform float4 _BackLightCol;
+            uniform float _Disort;
+            uniform float _Power;
+            uniform float _Scale;
+
+            half SSS(half3 lDirWS , half3 nDirWS , half3 vDirWS)
             {
-                // 注意light.distanceAttenuation * light.shadowAttenuation，这里已经将距离衰减与阴影衰减进行了计算
-                return LightingBased(light.color, light.direction, light.distanceAttenuation * light.shadowAttenuation, normalWS);
+                half3 bDirWS = -normalize(lDirWS + nDirWS * _Disort);
+                
+                half vdotb = max(0 , dot(vDirWS, bDirWS));
+
+                half sss = max(0 , pow(vdotb , _Power)) * _Scale;
+
+                return sss;
             }
             
             half4 frag(v2f i): SV_Target
             {
-                half3 normalWS = NormalizeNormalPerPixel(i.normal);
                 
                 // 使用HLSL的函数获取主光源数据
                 Light mainLight = GetMainLight();
-                half3 diffuse = LightingBased(mainLight, normalWS);
+                
+                //向量准备
+                half3 nDirWS = i.normal;
+                half3 vDirWS = _WorldSpaceCameraPos - i.posWS;
+                half3 lDirWS = mainLight.direction;
+
+                // half vdotb = max(0 , dot(vDirWS, bDirWS));
+
+                half sss = SSS(lDirWS , nDirWS , vDirWS);
+
+                half3 col = _BackLightCol.rgb * sss;
                 
                 // 计算其他光源
                 #ifdef _AdditionalLights
@@ -98,14 +101,16 @@ Shader "URP/Jade1"
                     for (uint lightIndex = 0u; lightIndex < pixelLightCount; ++ lightIndex)
                     {
                         // 获取其他光源
-                        Light light = GetAdditionalLight(lightIndex, i.positionWS);
-                        diffuse += LightingBased(light, normalWS);
+                        Light light = GetAdditionalLight(lightIndex, i.posWS);
+
+                        half3 lDirWS = light.direction;
+                        col += SSS(lDirWS , nDirWS , vDirWS);
                     }
                 #endif
                 
                 // 采用球谐光照计算环境光
-                half3 ambient = SampleSH(normalWS);
-                return half4(ambient + diffuse, 1.0);
+                half3 ambient = SampleSH(nDirWS);
+                return half4(col, 1.0);
             }
             
             ENDHLSL
