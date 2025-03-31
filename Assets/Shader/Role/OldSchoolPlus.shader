@@ -52,6 +52,7 @@ Shader "Unlit/OldSchoolPlus"
                 float4 pos : SV_POSITION;
                 float2 uv : TEXCOORD0;
                 float3 normalWS : TEXCOORD2;
+                float4 posWS : TEXCOORD3;
                 
                 LIGHTING_COORDS(3,4)
             };
@@ -64,6 +65,7 @@ Shader "Unlit/OldSchoolPlus"
                 o.pos = UnityObjectToClipPos(v.vertex);
                 o.normalWS = UnityObjectToWorldNormal(v.normalWS);
                 o.uv = v.uv0;
+                o.posWS = mul(unity_ObjectToWorld , v.vertex);
                 
                 TRANSFER_VERTEX_TO_FRAGMENT(o)
                 return o;
@@ -74,7 +76,7 @@ Shader "Unlit/OldSchoolPlus"
                 float shadow = LIGHT_ATTENUATION(i);        // 同样Unity封装好的函数 可取出投影
                 float3 nDirWS = i.normalWS;
                 float3 lDir = _WorldSpaceLightPos0.xyz;
-                float3 vDir = normalize(_WorldSpaceCameraPos.xyz - i.pos.xyz);
+                float3 vDir = normalize(_WorldSpaceCameraPos.xyz - i.posWS.xyz);
 
                 //3Col
                 float upMask = max(0.0 , i.normalWS.y);
