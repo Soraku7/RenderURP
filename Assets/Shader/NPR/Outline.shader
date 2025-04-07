@@ -98,18 +98,37 @@ Shader "NRP/Outline"
             {
                 float4 vertex : POSITION;
                 float3 normal : NORMAL;
+                float4 tangent : TANGENT;
             };
 
             struct v2f
             {
-                float4 vertex : SV_POSITION;
+                float4 pos : SV_POSITION;
             };
 
 
             v2f vert(appdata v)
             {
                 v2f o;
-                o.vertex = TransformObjectToHClip(v.vertex.xyz + v.normal * _OutlineWidth * 0.1);
+
+                VertexPositionInputs positionInputs = GetVertexPositionInputs(v.vertex.xyz);
+                float4 pos = positionInputs.positionCS;
+
+                //获得屏幕缩放比例
+                float4 scaledScreenParams = GetScaledScreenParams();
+                float ScaleX = abs(scaledScreenParams.x / scaledScreenParams.y);
+
+                //不光滑物体描边会被截断
+                //使用外扩法线将发现数据转入裁剪空间
+                float3 nDirCS = TransformObjectToHClip(v.tangent.xyz);
+                //根据法线计算线宽偏移量
+                float2 extendDis = normalize(nDirCS.xy) * (_OutlineWidth*0.01);
+                //偏移量会被拉伸 故使用缩放比例进行修正
+                extendDis.x /= ScaleX ;
+                //屏幕下描边宽度不变，则需要顶点偏移的距离在NDC坐标下为固定值
+                //因为后续会转换成NDC坐标，会除w进行缩放，所以先乘一个w，那么该偏移的距离就不会在NDC下有变换
+                pos.xy += extendDis * pos.w;
+                o.pos = pos;
                 return o;
             }
 
