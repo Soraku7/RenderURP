@@ -25,7 +25,8 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
-  m_InvalidKeywords: []
+  m_InvalidKeywords:
+  - _OLWVWD_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -112,21 +113,23 @@ Material:
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 2
-    - _Cutoff: 0.5
+    - _Cutoff: 0.453
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _DissolveAmount: 1
     - _DstBlend: 0
     - _DstBlendAlpha: 0
+    - _ENABLE_ALPHA_TEST: 0
     - _EdgeWidth: 0.05
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
+    - _OLWVWD: 1
     - _OcclusionStrength: 1
     - _OutlineFactor: 1.09
-    - _OutlineWidth: 1
+    - _OutlineWidth: 0.572
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1

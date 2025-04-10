@@ -114,10 +114,10 @@ Material:
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _Disort: 0.498
+    - _Disort: 0.656
     - _DstBlend: 0
     - _DstBlendAlpha: 0
-    - _EnvRotate: 49
+    - _EnvRotate: 78
     - _EnvironmentReflections: 1
     - _FresnelPow: 1.58
     - _Gloss: 40
@@ -127,10 +127,10 @@ Material:
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
-    - _Power: 0.43
+    - _Power: 0.97
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Scale: 3.14
+    - _Scale: 3.12
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
