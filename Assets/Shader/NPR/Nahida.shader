@@ -3,9 +3,17 @@
     Properties
     {
         [Header(Texture)]
-        _MainTex ("Texture", 2D) = "white" {}
-        _BaseColor("BaseColor", Color) = (1,0,0,1)
+        _BaseTex ("Texture", 2D) = "white" {}
+        _BaseTexFra ("BaseTexFra" , Range(0 , 1)) = 1
         _NormalMap("NormalMap", 2D) = "white" {}
+        _ToonTex("ToonTex", 2D) = "white" {}
+        _ToonTexFra("ToonTexFra", Range(0, 1)) = 1
+        _LightMap("LightMap", 2D) = "white" {}
+        _RampTex("RampTex", 2D) = "white" {}
+        
+        [Header(Color)]
+        _AmbientCol("AmbientColor", Color) = (1,1,1,1)
+        _DiffuseCol("DiffuseColor", Color) = (1,1,1,1)
 
         [Header(Outline)]
         _OutlineCol("OutlineCol", Color) = (1,1,1,1)
@@ -58,11 +66,19 @@
                 float3 bDirWS : TEXCOORD5;
             };
 
-            sampler2D _MainTex;
-            float4 _MainTex_ST;
+            sampler2D _BaseTex;
+            float4 _BaseTex_ST;
+            float _BaseTexFra;
             sampler2D _NormalMap;
+            sampler2D _ToonTex;
+            float _ToonTexFra;
+            sampler2D _LightMap;
+            sampler2D _RampTex;
+
             
-            half4 _BaseColor;
+            half4 _AmbientCol;
+            half4 _DiffuseCol;
+            
             
             half3 _ShadowColor;
             float _ShadowRange;
@@ -72,7 +88,7 @@
                 v2f o;
                 VertexPositionInputs vertexInput = GetVertexPositionInputs(v.vertex.xyz);
                 o.vertex = vertexInput.positionCS;
-                o.uv = TRANSFORM_TEX(v.uv, _MainTex);
+                o.uv = TRANSFORM_TEX(v.uv, _BaseTex);
                 o.posWS = vertexInput.positionWS;
                 o.nDirWS = TransformObjectToWorldNormal(v.normal);
                 o.tDirWS = TransformObjectToWorldDir(v.tangent.xyz);
@@ -84,26 +100,32 @@
             half4 frag(v2f i) : SV_Target
             {
                 Light mainLight = GetMainLight();
-                half4 mainTex = tex2D(_MainTex, i.uv);
+                half4 normalMap = tex2D(_NormalMap, i.uv);
 
                 half3x3 TBN = half3x3(i.tDirWS , i.bDirWS, i.nDirWS);
-                half4 normalMap = tex2D(_NormalMap, i.uv);
+                
                 half3 nDirTS = UnpackNormal(normalMap);
-
-                half3 vDirWS = normalize(_WorldSpaceCameraPos - i.posWS.xyz);
                 half3 nDirWS = TransformTangentToWorld(nDirTS, TBN, true);
+                half3 nDirVS = mul(UNITY_MATRIX_V , nDirWS);
+                half3 vDirWS = normalize(_WorldSpaceCameraPos - i.posWS.xyz);
                 half3 lDirWS = normalize(mainLight.direction);
-                half3 H = normalize(-lDirWS + vDirWS);
+                half3 hDirWS = normalize(-lDirWS + vDirWS);
 
                 half ndotl = max(0, dot(nDirWS, lDirWS));
 
                 half halfLambort = ndotl * 0.5 + 0.5;
+                half2 matcapUV = nDirVS.rg * 0.5 + 0.5;
                 
+                float4 baseTex = tex2D(_BaseTex, i.uv);
+                float4 toonTex = tex2D(_ToonTex, matcapUV);
 
-                half3 diffuse = halfLambort > _ShadowRange ? _BaseColor : _ShadowColor;
-                diffuse *= mainTex;
-                half3 col = diffuse * mainLight.color;
-                return half4(col, mainTex.a);
+                
+                half3 col = _AmbientCol.rgb;
+                col = saturate(lerp(col , col + _DiffuseCol , 0.6));
+                col = lerp(col , col * baseTex.rgb , _BaseTexFra);
+                col = lerp(col , col * toonTex.rgb , _ToonTexFra);
+
+                return half4(col.rgb , 1.0);
             }
             ENDHLSL
         }
