@@ -8,8 +8,15 @@
         _NormalMap("NormalMap", 2D) = "white" {}
         _ToonTex("ToonTex", 2D) = "white" {}
         _ToonTexFra("ToonTexFra", Range(0, 1)) = 1
-        _LightMap("LightMap", 2D) = "white" {}
+        _LightMap("LightMap , G:灰色接受光照 黑色白色不接受光照 A:传入材质信息", 2D) = "white" {}
         _RampTex("RampTex", 2D) = "white" {}
+        
+        [Header(RampMap)]
+        _RampMapRow0 ("RampMapRow0", Range(1 , 5)) = 1
+        _RampMapRow1 ("RampMapRow1", Range(1 , 5)) = 4
+        _RampMapRow2 ("RampMapRow2", Range(1 , 5)) = 3
+        _RampMapRow3 ("RampMapRow3", Range(1 , 5)) = 5
+        _RampMapRow4 ("RampMapRow4", Range(1 , 5)) = 2
         
         [Header(Color)]
         _AmbientCol("AmbientColor", Color) = (1,1,1,1)
@@ -75,6 +82,11 @@
             sampler2D _LightMap;
             sampler2D _RampTex;
 
+            float _RampTexRow0;
+            float _RampTexRow1;
+            float _RampTexRow2;
+            float _RampTexRow3;
+            float _RampTexRow4;
             
             half4 _AmbientCol;
             half4 _DiffuseCol;
@@ -101,6 +113,7 @@
             {
                 Light mainLight = GetMainLight();
                 half4 normalMap = tex2D(_NormalMap, i.uv);
+                half4 lightMap = tex2D(_LightMap, i.uv);
 
                 half3x3 TBN = half3x3(i.tDirWS , i.bDirWS, i.nDirWS);
                 
@@ -113,19 +126,55 @@
 
                 half ndotl = max(0, dot(nDirWS, lDirWS));
 
-                half halfLambort = ndotl * 0.5 + 0.5;
+                half halfLambort = pow(ndotl * 0.5 + 0.5 , 2);
                 half2 matcapUV = nDirVS.rg * 0.5 + 0.5;
                 
                 float4 baseTex = tex2D(_BaseTex, i.uv);
                 float4 toonTex = tex2D(_ToonTex, matcapUV);
 
+                float matEnum0 = 0.0;
+                float matEnum1 = 0.3;
+                float matEnum2 = 0.5;
+                float matEnum3 = 0.7;
+                float matEnum4 = 1.0;
+
+                float ramp0 = _RampTexRow0/10 - 0.05;
+                float ramp1 = _RampTexRow1/10 - 0.05;
+                float ramp2 = _RampTexRow2/10 - 0.05;
+                float ramp3 = _RampTexRow3/10 - 0.05;
+                float ramp4 = _RampTexRow4/10 - 0.05;
+
+                //判断要采样哪一个RampTex
+                float dayRampV = lerp(ramp3 , ramp4 , step(lightMap.a , (matEnum3 + matEnum4) / 2));
+                dayRampV = lerp(dayRampV , ramp2 , step(lightMap.a , (matEnum2 + matEnum3) / 2));
+                dayRampV = lerp(dayRampV , ramp1 , step(lightMap.a , (matEnum1 + matEnum2) / 2));
+                dayRampV = lerp(dayRampV , ramp0 , step(lightMap.a , (matEnum0 + matEnum1) / 2));
+                float nightRampV = dayRampV + 0.5;
+
+                //用半兰伯特采样阴影的U坐标
+                //防止采样到图片边缘
+                float rampClampMin = 0.003;
+                float rampCalampMax = 0.997;
+
+                float rampU = clamp(smoothstep(0.2 , 0.4 , halfLambort), rampClampMin , rampCalampMax);
+                //UnityUV坐标原点在左下角 V轴需要反向
+                float2 rampUV = float2(rampU , 1 - dayRampV);
+                float2 rampUVNight = float2(rampU , 1 - nightRampV);
+
+                float rampDarkU = rampClampMin;
+                float2 rampDarkUV = float2(rampDarkU , 1 - dayRampV);
+                float2 rampDarkUVNight = float2(rampDarkU , 1 - nightRampV);
+
+                float isDay = lDirWS.y + 1 / 2;
+                float3 rampCol = lerp(tex2D(_RampTex , rampUVNight).rgb , tex2D(_RampTex , rampUV).rgb , isDay);
+                float3 rampDarkCol = lerp(tex2D(_RampTex , rampDarkUVNight).rgb , tex2D(_RampTex , rampDarkUV).rgb , isDay);
                 
                 half3 col = _AmbientCol.rgb;
                 col = saturate(lerp(col , col + _DiffuseCol , 0.6));
                 col = lerp(col , col * baseTex.rgb , _BaseTexFra);
                 col = lerp(col , col * toonTex.rgb , _ToonTexFra);
-
-                return half4(col.rgb , 1.0);
+            
+                return half4(rampCol , 1.0);
             }
             ENDHLSL
         }
