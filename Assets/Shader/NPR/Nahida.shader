@@ -91,7 +91,6 @@
             half4 _AmbientCol;
             half4 _DiffuseCol;
             
-            
             half3 _ShadowColor;
             float _ShadowRange;
 
@@ -127,6 +126,7 @@
                 half ndotl = max(0, dot(nDirWS, lDirWS));
 
                 half halfLambort = pow(ndotl * 0.5 + 0.5 , 2);
+                half lambortStep = smoothstep(0.432 , 0.450 , halfLambort);
                 half2 matcapUV = nDirVS.rg * 0.5 + 0.5;
                 
                 float4 baseTex = tex2D(_BaseTex, i.uv);
@@ -169,12 +169,19 @@
                 float3 rampCol = lerp(tex2D(_RampTex , rampUVNight).rgb , tex2D(_RampTex , rampUV).rgb , isDay);
                 float3 rampDarkCol = lerp(tex2D(_RampTex , rampDarkUVNight).rgb , tex2D(_RampTex , rampDarkUV).rgb , isDay);
                 
-                half3 col = _AmbientCol.rgb;
-                col = saturate(lerp(col , col + _DiffuseCol , 0.6));
-                col = lerp(col , col * baseTex.rgb , _BaseTexFra);
-                col = lerp(col , col * toonTex.rgb , _ToonTexFra);
+                half3 baseCol = _AmbientCol.rgb;
+                baseCol = saturate(lerp(baseCol , baseCol + _DiffuseCol , 0.6));
+                baseCol = lerp(baseCol , baseCol * baseTex.rgb , _BaseTexFra);
+                baseCol = lerp(baseCol , baseCol * toonTex.rgb , _ToonTexFra);
+
+                float3 shadowCol = baseCol * rampCol * _ShadowColor.rgb;
+                float3 darkshadowCol = baseCol * rampDarkCol * _ShadowColor.rgb;
+
+                float3 diffuse = lerp(shadowCol , baseCol , lambortStep);
+                diffuse = lerp(darkshadowCol , diffuse , saturate(lightMap.g * 2));
+                diffuse = lerp(diffuse , baseCol , saturate(lightMap.g - 0.5) * 2);
             
-                return half4(rampCol , 1.0);
+                return half4(diffuse , 1.0);
             }
             ENDHLSL
         }
