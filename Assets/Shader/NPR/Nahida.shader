@@ -8,8 +8,9 @@
         _NormalMap("NormalMap", 2D) = "white" {}
         _ToonTex("ToonTex", 2D) = "white" {}
         _ToonTexFra("ToonTexFra", Range(0, 1)) = 1
-        _LightMap("LightMap , G:灰色接受光照 黑色白色不接受光照 A:传入材质信息", 2D) = "white" {}
+        _LightMap("LightMap ,R:高光强度 G:灰色接受光照 黑色白色不接受光照 B:高光细节 A:传入材质信息", 2D) = "white" {}
         _RampTex("RampTex", 2D) = "white" {}
+        _MatcapTex("MatcapTex", 2D) = "white" {}
         
         [Header(RampMap)]
         _RampMapRow0 ("RampMapRow0", Range(1 , 5)) = 1
@@ -21,6 +22,11 @@
         [Header(Color)]
         _AmbientCol("AmbientColor", Color) = (1,1,1,1)
         _DiffuseCol("DiffuseColor", Color) = (1,1,1,1)
+        
+        [Header(Specular)]
+        _SpecularPow("Specular", Range(1, 90)) = 30
+        _KsNoMatallic("KsNoMat", Range(1, 90)) = 30
+        _KsMatallic("KsMat", Range(1, 90)) = 30
 
         [Header(Outline)]
         _OutlineCol("OutlineCol", Color) = (1,1,1,1)
@@ -71,6 +77,8 @@
                 float3 posWS : TEXCOORD2;
                 float3 tDirWS : TEXCOORD4;
                 float3 bDirWS : TEXCOORD5;
+
+                half fogFactor : TEXCOORD6;
             };
 
             sampler2D _BaseTex;
@@ -81,6 +89,7 @@
             float _ToonTexFra;
             sampler2D _LightMap;
             sampler2D _RampTex;
+            sampler2D _MatcapTex;
 
             float _RampTexRow0;
             float _RampTexRow1;
@@ -90,6 +99,10 @@
             
             half4 _AmbientCol;
             half4 _DiffuseCol;
+
+            half _SpecularPow;
+            half _KsNoMatallic;
+            half _KsMatallic;
             
             half3 _ShadowColor;
             float _ShadowRange;
@@ -104,6 +117,8 @@
                 o.nDirWS = TransformObjectToWorldNormal(v.normal);
                 o.tDirWS = TransformObjectToWorldDir(v.tangent.xyz);
                 o.bDirWS = cross(o.nDirWS , o.tDirWS) * v.tangent.w;
+
+                o.fogFactor = ComputeFogFactor(o.posWS.z);
 
                 return o;
             }
@@ -121,16 +136,19 @@
                 half3 nDirVS = mul(UNITY_MATRIX_V , nDirWS);
                 half3 vDirWS = normalize(_WorldSpaceCameraPos - i.posWS.xyz);
                 half3 lDirWS = normalize(mainLight.direction);
-                half3 hDirWS = normalize(-lDirWS + vDirWS);
+                half3 hDirWS = normalize(lDirWS + vDirWS);
 
                 half ndotl = max(0, dot(nDirWS, lDirWS));
+                half ndoth = max(0, dot(nDirWS, hDirWS));
 
                 half halfLambort = pow(ndotl * 0.5 + 0.5 , 2);
                 half lambortStep = smoothstep(0.432 , 0.450 , halfLambort);
+
                 half2 matcapUV = nDirVS.rg * 0.5 + 0.5;
                 
                 float4 baseTex = tex2D(_BaseTex, i.uv);
                 float4 toonTex = tex2D(_ToonTex, matcapUV);
+                float4 matCapTex = tex2D(_MatcapTex, matcapUV);
 
                 float matEnum0 = 0.0;
                 float matEnum1 = 0.3;
@@ -180,8 +198,26 @@
                 float3 diffuse = lerp(shadowCol , baseCol , lambortStep);
                 diffuse = lerp(darkshadowCol , diffuse , saturate(lightMap.g * 2));
                 diffuse = lerp(diffuse , baseCol , saturate(lightMap.g - 0.5) * 2);
-            
-                return half4(diffuse , 1.0);
+
+                float blinnPhong = step(0 , ndotl) * pow(ndoth , _SpecularPow);
+                //设置1.04是防止采样到黑色的高光贴图
+                float3 noMatallicSpec = step(1.04 - blinnPhong , lightMap.b) * lightMap.r * _KsNoMatallic;
+                float3 matallicSpec = blinnPhong * lightMap.b * lambortStep * baseCol * _KsMatallic;
+
+                //取出金属高光区域
+                float isMatallic = step(0.95 , lightMap.r);
+
+                float3 specular = lerp(noMatallicSpec , matallicSpec , isMatallic);
+
+                float3 matallic = lerp(0 , matCapTex.r * baseCol , isMatallic);
+
+                float3 alebdo = diffuse + specular + matallic;
+
+                float alpha = baseTex.a * toonTex.a;
+                float4 col = float4(alebdo, alpha);
+                col.rgb = MixFog(col.rgb , i.fogFactor);
+                
+                return col;
             }
             ENDHLSL
         }
