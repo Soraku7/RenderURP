@@ -77,6 +77,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MatcapTex:
+        m_Texture: {fileID: 2800000, guid: d7d1337cec6422b4f9db7325b520d61f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -147,6 +151,10 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _IsDay: 1
+    - _KsMatalic: 30
+    - _KsMatallic: 30
+    - _KsNoMatalic: 0.5
+    - _KsNoMatallic: 30
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _OutlineWidth: 0.361
@@ -162,6 +170,7 @@ Material:
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+    - _SpecularPow: 30
     - _SphereMulAdd: 0.5
     - _SphereTexFra: 0
     - _SrcBlend: 1
