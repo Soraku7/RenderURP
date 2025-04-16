@@ -24,8 +24,8 @@
         _DiffuseCol("DiffuseColor", Color) = (1,1,1,1)
         
         [Header(Specular)]
-        _SpecularPow("Specular", Range(1, 90)) = 30
-        _KsNoMatallic("KsNoMat", Range(1, 90)) = 30
+        _SpecularPow("Specular", Range(1, 100)) = 30
+        _KsNoMatallic("KsNoMat", Range(0.1, 5)) = 1
         _KsMatallic("KsMat", Range(1, 90)) = 30
 
         [Header(Outline)]
@@ -132,8 +132,8 @@
                 half3x3 TBN = half3x3(i.tDirWS , i.bDirWS, i.nDirWS);
                 
                 half3 nDirTS = UnpackNormal(normalMap);
-                half3 nDirWS = TransformTangentToWorld(nDirTS, TBN, true);
-                half3 nDirVS = mul(UNITY_MATRIX_V , nDirWS);
+                half3 nDirWS = normalize(mul(nDirTS, TBN));
+                half3 nDirVS = normalize(mul(UNITY_MATRIX_V , nDirWS));
                 half3 vDirWS = normalize(_WorldSpaceCameraPos - i.posWS.xyz);
                 half3 lDirWS = normalize(mainLight.direction);
                 half3 hDirWS = normalize(lDirWS + vDirWS);
@@ -163,7 +163,7 @@
                 float ramp4 = _RampTexRow4/10 - 0.05;
 
                 //判断要采样哪一个RampTex
-                float dayRampV = lerp(ramp3 , ramp4 , step(lightMap.a , (matEnum3 + matEnum4) / 2));
+                float dayRampV = lerp(ramp4 , ramp3 , step(lightMap.a , (matEnum3 + matEnum4) / 2));
                 dayRampV = lerp(dayRampV , ramp2 , step(lightMap.a , (matEnum2 + matEnum3) / 2));
                 dayRampV = lerp(dayRampV , ramp1 , step(lightMap.a , (matEnum1 + matEnum2) / 2));
                 dayRampV = lerp(dayRampV , ramp0 , step(lightMap.a , (matEnum0 + matEnum1) / 2));
@@ -195,14 +195,15 @@
                 float3 shadowCol = baseCol * rampCol * _ShadowColor.rgb;
                 float3 darkshadowCol = baseCol * rampDarkCol * _ShadowColor.rgb;
 
-                float3 diffuse = lerp(shadowCol , baseCol , lambortStep);
+                float3 diffuse = 0;
+                diffuse = lerp(shadowCol , baseCol , lambortStep);
                 diffuse = lerp(darkshadowCol , diffuse , saturate(lightMap.g * 2));
                 diffuse = lerp(diffuse , baseCol , saturate(lightMap.g - 0.5) * 2);
 
                 float blinnPhong = step(0 , ndotl) * pow(ndoth , _SpecularPow);
                 //设置1.04是防止采样到黑色的高光贴图
                 float3 noMatallicSpec = step(1.04 - blinnPhong , lightMap.b) * lightMap.r * _KsNoMatallic;
-                float3 matallicSpec = blinnPhong * lightMap.b * lambortStep * baseCol * _KsMatallic;
+                float3 matallicSpec = blinnPhong * lightMap.b * (lambortStep * 0.8 + 0.2) * baseCol * _KsMatallic;
 
                 //取出金属高光区域
                 float isMatallic = step(0.95 , lightMap.r);
@@ -217,7 +218,7 @@
                 float4 col = float4(alebdo, alpha);
                 col.rgb = MixFog(col.rgb , i.fogFactor);
                 
-                return col;
+                return float4(alebdo, 1.0);
             }
             ENDHLSL
         }

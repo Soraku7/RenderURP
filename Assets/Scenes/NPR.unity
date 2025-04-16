@@ -179,6 +179,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Avatar_Loli_Catalyst_Nahida
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4ba0222d3968f7440a463d7195d8ce11, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1630794972795428178, guid: 4ba0222d3968f7440a463d7195d8ce11, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -230,7 +234,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!135 &30324235
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -320,7 +324,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &685639771
+--- !u!1001 &225189965
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -330,7 +334,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 4ba0222d3968f7440a463d7195d8ce11, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.375
+      value: 0.637
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4ba0222d3968f7440a463d7195d8ce11, type: 3}
       propertyPath: m_LocalPosition.y
@@ -368,22 +372,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -3955979763095087353, guid: 4ba0222d3968f7440a463d7195d8ce11, type: 3}
-      propertyPath: m_RootBone
-      value: 
-      objectReference: {fileID: 1693588560}
-    - target: {fileID: -3955979763095087353, guid: 4ba0222d3968f7440a463d7195d8ce11, type: 3}
-      propertyPath: 'm_Bones.Array.data[0]'
-      value: 
-      objectReference: {fileID: 1693588560}
-    - target: {fileID: -3955979763095087353, guid: 4ba0222d3968f7440a463d7195d8ce11, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: -1282991231373335027, guid: 4ba0222d3968f7440a463d7195d8ce11, type: 3}
-    - target: {fileID: -3006850775902700425, guid: 4ba0222d3968f7440a463d7195d8ce11, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: cbfd851e6cf50d944865663542aa0646, type: 2}
     - target: {fileID: 919132149155446097, guid: 4ba0222d3968f7440a463d7195d8ce11, type: 3}
       propertyPath: m_Name
       value: Avatar_Loli_Catalyst_Nahida (2)
@@ -404,18 +392,6 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[3]'
       value: 
       objectReference: {fileID: 2100000, guid: 6a5ecafbe13ac644c8cc280ff07bc5e3, type: 2}
-    - target: {fileID: 4680245696820673489, guid: 4ba0222d3968f7440a463d7195d8ce11, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: -1282991231373335027, guid: 4ba0222d3968f7440a463d7195d8ce11, type: 3}
-    - target: {fileID: 6868716418057165105, guid: 4ba0222d3968f7440a463d7195d8ce11, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: -1282991231373335027, guid: 4ba0222d3968f7440a463d7195d8ce11, type: 3}
-    - target: {fileID: 7414262871263811051, guid: 4ba0222d3968f7440a463d7195d8ce11, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: cbfd851e6cf50d944865663542aa0646, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -610,16 +586,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Avatar_Loli_Catalyst_Nahida (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4ba0222d3968f7440a463d7195d8ce11, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ba0222d3968f7440a463d7195d8ce11, type: 3}
---- !u!4 &1693588560 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 961210195233335601, guid: 4ba0222d3968f7440a463d7195d8ce11, type: 3}
-  m_PrefabInstance: {fileID: 1693588559}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2058707613
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,7 +623,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -711,13 +686,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058707613}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.2855167, y: 0.66820025, z: -0.31158686, w: -0.61229265}
+  m_LocalRotation: {x: 0.010325529, y: 0.9060373, z: -0.42249212, w: 0.022143168}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 50, y: 265, z: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: 177.2, z: 0}
 --- !u!114 &2058707616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -749,5 +724,5 @@ SceneRoots:
   - {fileID: 2058707615}
   - {fileID: 3180893}
   - {fileID: 1693588559}
-  - {fileID: 685639771}
   - {fileID: 30324238}
+  - {fileID: 225189965}

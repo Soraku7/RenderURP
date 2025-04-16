@@ -154,7 +154,7 @@ Material:
     - _KsMatalic: 30
     - _KsMatallic: 30
     - _KsNoMatalic: 0.5
-    - _KsNoMatallic: 30
+    - _KsNoMatallic: 0.79
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _OutlineWidth: 0.361
@@ -180,7 +180,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _AmbientCol: {r: 1, g: 1, b: 1, a: 1}
+    - _AmbientCol: {r: 0.7660377, g: 0.7660377, b: 0.7660377, a: 1}
     - _AmbientColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
@@ -188,7 +188,7 @@ Material:
     - _DiffuseColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineCol: {r: 0, g: 0, b: 0, a: 1}
-    - _ShadowColor: {r: 1, g: 1, b: 1, a: 1}
+    - _ShadowColor: {r: 0.735849, g: 0.735849, b: 0.735849, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
