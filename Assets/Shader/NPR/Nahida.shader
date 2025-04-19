@@ -19,7 +19,7 @@
         _RampMapRow3 ("RampMapRow3", Range(1 , 5)) = 5
         _RampMapRow4 ("RampMapRow4", Range(1 , 5)) = 2
         
-        [Header(Color)]
+        [Header(Diffuse)]
         _AmbientCol("AmbientColor", Color) = (1,1,1,1)
         _DiffuseCol("DiffuseColor", Color) = (1,1,1,1)
         
