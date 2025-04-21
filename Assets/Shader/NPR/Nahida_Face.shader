@@ -7,12 +7,21 @@ Shader "NRP/Nahida_Face"
         _BaseTexFra ("BaseTexFra" , Range(0 , 1)) = 1
         _ToonTex("ToonTex", 2D) = "white" {}
         _ToonTexFra("ToonTexFra", Range(0, 1)) = 1
+        _RampTex("RampTex", 2D) = "white" {}
         
         [Header(Diffuse)]
         _AmbientCol("AmbientColor", Color) = (1,1,1,1)
         _DiffuseCol("DiffuseColor", Color) = (1,1,1,1)
+        
+        [Header(Ramp)]
+        _RampRow("RampRow", Range(0, 10)) = 1
+        
+        [Header(SDF)]
+        _SDF("SDFTex", 2D) = "white" {}
+        _ForwardVector("ForwardVector", Vector) = (0, 0, 1, 0)
+        _RightVector("RightVector", Vector) = (1, 0, 0, 0)
+        
     }
-
     SubShader
     {
         Tags
@@ -58,9 +67,16 @@ Shader "NRP/Nahida_Face"
             sampler2D _NormalMap;
             sampler2D _ToonTex;
             float _ToonTexFra;
+            sampler2D _RampTex;
 
             half4 _AmbientCol;
             half4 _DiffuseCol;
+
+            half _RampRow;
+
+            sampler2D _SDF;
+            float4 _ForwardVector;
+            float4 _RightVector;
 
             v2f vert(appdata v)
             {
@@ -92,6 +108,20 @@ Shader "NRP/Nahida_Face"
                 baseCol = saturate(lerp(baseCol , baseCol + _DiffuseCol , 0.6));
                 baseCol = lerp(baseCol , baseCol * baseTex.rgb , _BaseTexFra);
                 baseCol = lerp(baseCol , baseCol * toonTex.rgb , _ToonTexFra);
+
+                //皮肤一般使用第二行
+                float rampV = _RampRow / 10 - 0.05;
+                float rampClampMin = 0.003;
+                float2 rampUV = float2(rampClampMin , 1 - rampV);
+                float2 rampUVNight = float2(rampClampMin , 1 - (rampV + 0.5));
+
+                float isDay = (lDirWS.y + 1) / 2;
+                float rampCol = lerp(tex2D(_RampTex , rampUVNight).rgb , tex2D(_RampTex , rampUV).rgb , isDay);
+
+                float3 forwardVec = _ForwardVector;
+                float3 rightVec = _RightVector;
+
+                float3 upVector = cross(forwardVec , rightVec);
                 
                 return half4(baseCol , 1.0);
             }

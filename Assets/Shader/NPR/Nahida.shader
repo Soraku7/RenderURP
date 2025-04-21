@@ -183,7 +183,7 @@
                 float2 rampDarkUV = float2(rampDarkU , 1 - dayRampV);
                 float2 rampDarkUVNight = float2(rampDarkU , 1 - nightRampV);
 
-                float isDay = lDirWS.y + 1 / 2;
+                float isDay = (lDirWS.y + 1) / 2;
                 float3 rampCol = lerp(tex2D(_RampTex , rampUVNight).rgb , tex2D(_RampTex , rampUV).rgb , isDay);
                 float3 rampDarkCol = lerp(tex2D(_RampTex , rampDarkUVNight).rgb , tex2D(_RampTex , rampDarkUV).rgb , isDay);
                 
