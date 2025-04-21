@@ -122,8 +122,32 @@ Shader "NRP/Nahida_Face"
                 float3 rightVec = _RightVector;
 
                 float3 upVector = cross(forwardVec , rightVec);
+                //光线在上向量上的投影
+                float3 LpU = length(lDirWS) * (dot(lDirWS, upVector) / (length(lDirWS) * length(upVector))) * (upVector
+                    / length(upVector));
+                //头部朝向光方向向量
+                float3 LpHeadHorizon = lDirWS - LpU;
+
+                //脸部右侧向量点乘光线方向向量 结果0-0.5则为左侧 0.5-1为右侧
+                //此处仅能判断面向头部正面方向 后方向无法判断
+                float value = acos(dot(normalize(LpHeadHorizon) , normalize(rightVec))) / PI;
+                float exposeRight = step(value , 0.5);
+
+                //将值映射成0-1
+                float valueR = pow(1 - value * 2 , 3);
+                float valueL = pow(value * 2 - 1 , 3);
+                float mixValue = lerp(valueL , valueR , exposeRight);
+
+                float sdfRambrandLeft = tex2D(_SDF , float2(1 - i.uv.x , i.uv.y)).r;
+                float sdfRambrandRight = tex2D(_SDF , i.uv).r;
+                float mixSDF = lerp(sdfRambrandRight , sdfRambrandLeft , exposeRight);
+
+                //value小于灰度值则为亮部
+                float sdf = step(mixValue , mixSDF);
+                //判断光照是否在脑后
+                sdf = lerp(0 , sdf , step(0 , dot(normalize(LpHeadHorizon) , normalize(forwardVec))));
                 
-                return half4(baseCol , 1.0);
+                return half4(sdf , sdf , sdf , 1.0);
             }
             ENDHLSL
         }
