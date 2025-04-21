@@ -218,7 +218,7 @@
                 float4 col = float4(alebdo, alpha);
                 col.rgb = MixFog(col.rgb , i.fogFactor);
                 
-                return float4(alebdo, 1.0);
+                return col;
             }
             ENDHLSL
         }

@@ -8,10 +8,12 @@ Shader "NRP/Nahida_Face"
         _ToonTex("ToonTex", 2D) = "white" {}
         _ToonTexFra("ToonTexFra", Range(0, 1)) = 1
         _RampTex("RampTex", 2D) = "white" {}
+        _ShadowTex("R , G: 黑色不受sdf控制白色受到sdf控制 A:黑色为受到阴影 白色为不受阴影", 2D) = "white" {}
         
         [Header(Diffuse)]
         _AmbientCol("AmbientColor", Color) = (1,1,1,1)
         _DiffuseCol("DiffuseColor", Color) = (1,1,1,1)
+        _ShadowCol("ShadowColor", Color) = (1,1,1,1)
         
         [Header(Ramp)]
         _RampRow("RampRow", Range(0, 10)) = 1
@@ -59,6 +61,7 @@ Shader "NRP/Nahida_Face"
                 float4 vertex : SV_POSITION;
                 float3 nDirWS : TEXCOORD1;
                 float3 posWS : TEXCOORD2;
+                half fogFactor : TEXCOORD3;
             };
 
             sampler2D _BaseTex;
@@ -68,9 +71,11 @@ Shader "NRP/Nahida_Face"
             sampler2D _ToonTex;
             float _ToonTexFra;
             sampler2D _RampTex;
+            sampler2D _ShadowTex;
 
             half4 _AmbientCol;
             half4 _DiffuseCol;
+            half4 _ShadowCol;
 
             half _RampRow;
 
@@ -146,8 +151,23 @@ Shader "NRP/Nahida_Face"
                 float sdf = step(mixValue , mixSDF);
                 //判断光照是否在脑后
                 sdf = lerp(0 , sdf , step(0 , dot(normalize(LpHeadHorizon) , normalize(forwardVec))));
+
+                float4 shadowTex = tex2D(_ShadowTex , i.uv);
+                sdf *= shadowTex.r;
+                sdf = lerp(sdf , 1 , shadowTex.a);
+
+                float3 shadowCol = baseCol * rampCol * _ShadowCol.rgb;
+
+                float3 diffuse = lerp(shadowCol , baseCol , sdf);
+
+                float3 albedo = diffuse;
+
+                float alpha = baseTex.a * toonTex.a;
+
+                float4 col = float4(albedo, alpha);
+                col.rgb = MixFog(col.rgb , i.fogFactor);
                 
-                return half4(sdf , sdf , sdf , 1.0);
+                return col;
             }
             ENDHLSL
         }
