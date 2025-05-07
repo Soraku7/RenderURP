@@ -1,0 +1,1014 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dd2c0332-9c3e-4b55-9891-49caf777f382" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../../Spine.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CHANGELOG.md.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity-editor.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity-editor.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Asset Types.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Asset Types/AnimationReferenceAssetEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Asset Types/AnimationReferenceAssetEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Asset Types/SkeletonDataAssetInspector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Asset Types/SkeletonDataAssetInspector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Asset Types/SpineAtlasAssetInspector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Asset Types/SpineAtlasAssetInspector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Asset Types/SpineSpriteAtlasAssetInspector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Asset Types/SpineSpriteAtlasAssetInspector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Components.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Components/BoneFollowerGraphicInspector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Components/BoneFollowerGraphicInspector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Components/BoneFollowerInspector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Components/BoneFollowerInspector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Components/BoundingBoxFollowerGraphicInspector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Components/BoundingBoxFollowerGraphicInspector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Components/BoundingBoxFollowerInspector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Components/BoundingBoxFollowerInspector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Components/PointFollowerInspector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Components/PointFollowerInspector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Components/SkeletonAnimationInspector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Components/SkeletonAnimationInspector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Components/SkeletonGraphicCustomMaterialsInspector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Components/SkeletonGraphicCustomMaterialsInspector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Components/SkeletonGraphicInspector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Components/SkeletonGraphicInspector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Components/SkeletonMecanimInspector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Components/SkeletonMecanimInspector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Components/SkeletonMecanimRootMotionInspector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Components/SkeletonMecanimRootMotionInspector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Components/SkeletonRendererCustomMaterialsInspector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Components/SkeletonRendererCustomMaterialsInspector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Components/SkeletonRendererInspector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Components/SkeletonRendererInspector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Components/SkeletonRootMotionBaseInspector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Components/SkeletonRootMotionBaseInspector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Components/SkeletonRootMotionInspector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Components/SkeletonRootMotionInspector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Components/SkeletonUtilityBoneInspector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Components/SkeletonUtilityBoneInspector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Components/SkeletonUtilityInspector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Components/SkeletonUtilityInspector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/AtlasAsset Icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/AtlasAsset Icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/SkeletonDataAsset Icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/SkeletonDataAsset Icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-animation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-animation.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-animationRoot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-animationRoot.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-attachment.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-bone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-bone.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-boneNib.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-boneNib.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-boundingBox.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-boundingBox.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-clipping.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-clipping.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-constraintIK.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-constraintIK.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-constraintNib.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-constraintNib.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-constraintPath.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-constraintPath.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-constraintTransform.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-constraintTransform.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-constraints.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-constraints.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-event.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-event.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-hingeChain.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-hingeChain.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-image.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-mesh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-mesh.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-null.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-null.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-path.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-path.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-point.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-point.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-poseBones.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-poseBones.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-skeleton.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-skeleton.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-skeletonUtility.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-skeletonUtility.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-skin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-skin.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-skinPlaceholder.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-skinPlaceholder.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-skinsRoot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-skinsRoot.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-slot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-slot.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-slotRoot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-slotRoot.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-spine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-spine.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-subMeshRenderer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-subMeshRenderer.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-warning.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-warning.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-weights.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/GUI/icon-weights.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/ImporterPresets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/ImporterPresets/PMAPresetTemplate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/ImporterPresets/PMAPresetTemplate.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/ImporterPresets/PMATexturePreset.preset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/ImporterPresets/PMATexturePreset.preset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/ImporterPresets/StraightAlphaPreset.preset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/ImporterPresets/StraightAlphaPreset.preset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/ImporterPresets/StraightAlphaPresetTemplate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/ImporterPresets/StraightAlphaPresetTemplate.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Menus.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Menus.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Resources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Resources/SpineAssetDatabaseMarker.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Resources/SpineAssetDatabaseMarker.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Shaders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Shaders/SpineShaderWithOutlineGUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Shaders/SpineShaderWithOutlineGUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Shaders/SpineSpriteShaderGUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Shaders/SpineSpriteShaderGUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/SpineAttributeDrawers.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/SpineAttributeDrawers.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Utility.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Utility/AssetDatabaseAvailabilityDetector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Utility/AssetDatabaseAvailabilityDetector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Utility/AssetUtility.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Utility/AssetUtility.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Utility/BlendModeMaterialsUtility.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Utility/BlendModeMaterialsUtility.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Utility/BuildSettings.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Utility/BuildSettings.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Utility/DataReloadHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Utility/DataReloadHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Utility/Icons.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Utility/Icons.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Utility/Instantiation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Utility/Instantiation.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Utility/Preferences.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Utility/Preferences.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Utility/SpineEditorUtilities.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Utility/SpineEditorUtilities.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Utility/SpineHandles.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Utility/SpineHandles.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Utility/SpineInspectorUtility.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Utility/SpineInspectorUtility.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Utility/SpineMaskUtilities.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Utility/SpineMaskUtilities.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Windows.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Windows/SkeletonBaker.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Windows/SkeletonBaker.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Windows/SkeletonBakingWindow.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Windows/SkeletonBakingWindow.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Windows/SkeletonDebugWindow.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Windows/SkeletonDebugWindow.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Windows/SpinePreferences.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Windows/SpinePreferences.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Windows/SpriteAtlasImportWindow.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Editor/Windows/SpriteAtlasImportWindow.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Modules.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Modules/SkeletonRenderSeparator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Modules/SkeletonRenderSeparator/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Modules/SkeletonRenderSeparator/Editor/SkeletonPartsRendererInspector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Modules/SkeletonRenderSeparator/Editor/SkeletonPartsRendererInspector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Modules/SkeletonRenderSeparator/Editor/SkeletonRenderSeparatorInspector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Modules/SkeletonRenderSeparator/Editor/SkeletonRenderSeparatorInspector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Modules/SlotBlendModes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Modules/SlotBlendModes/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Modules/SlotBlendModes/Editor/SlotBlendModesEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Editor/spine-unity/Modules/SlotBlendModes/Editor/SlotBlendModesEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Runtime.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Animation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Animation.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/AnimationState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/AnimationState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/AnimationStateData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/AnimationStateData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Atlas.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Atlas.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Attachments.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Attachments/AtlasAttachmentLoader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Attachments/AtlasAttachmentLoader.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Attachments/Attachment.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Attachments/Attachment.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Attachments/AttachmentLoader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Attachments/AttachmentLoader.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Attachments/AttachmentType.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Attachments/AttachmentType.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Attachments/BoundingBoxAttachment.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Attachments/BoundingBoxAttachment.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Attachments/ClippingAttachment.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Attachments/ClippingAttachment.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Attachments/MeshAttachment.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Attachments/MeshAttachment.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Attachments/PathAttachment.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Attachments/PathAttachment.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Attachments/PointAttachment.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Attachments/PointAttachment.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Attachments/RegionAttachment.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Attachments/RegionAttachment.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Attachments/VertexAttachment.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Attachments/VertexAttachment.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/BlendMode.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/BlendMode.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Bone.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Bone.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/BoneData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/BoneData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Collections.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Collections/OrderedDictionary.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Collections/OrderedDictionary.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/ConstraintData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/ConstraintData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Event.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Event.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/EventData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/EventData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/ExposedList.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/ExposedList.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/IUpdatable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/IUpdatable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/IkConstraint.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/IkConstraint.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/IkConstraintData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/IkConstraintData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Json.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Json.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/MathUtils.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/MathUtils.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/PathConstraint.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/PathConstraint.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/PathConstraintData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/PathConstraintData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Skeleton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Skeleton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/SkeletonBinary.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/SkeletonBinary.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/SkeletonBounds.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/SkeletonBounds.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/SkeletonClipping.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/SkeletonClipping.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/SkeletonData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/SkeletonData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/SkeletonJson.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/SkeletonJson.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Skin.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Skin.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Slot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Slot.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/SlotData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/SlotData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/TransformConstraint.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/TransformConstraint.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/TransformConstraintData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/TransformConstraintData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Triangulator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-csharp/Triangulator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-unity.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-unity.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spine-unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Asset Types.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Asset Types/AnimationReferenceAsset.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Asset Types/AnimationReferenceAsset.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Asset Types/AtlasAssetBase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Asset Types/AtlasAssetBase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Asset Types/BlendModeMaterials.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Asset Types/BlendModeMaterials.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Asset Types/EventDataReferenceAsset.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Asset Types/EventDataReferenceAsset.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Asset Types/RegionlessAttachmentLoader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Asset Types/RegionlessAttachmentLoader.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Asset Types/SkeletonDataAsset.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Asset Types/SkeletonDataAsset.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Asset Types/SkeletonDataCompatibility.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Asset Types/SkeletonDataCompatibility.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Asset Types/SkeletonDataModifierAsset.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Asset Types/SkeletonDataModifierAsset.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Asset Types/SpineAtlasAsset.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Asset Types/SpineAtlasAsset.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Asset Types/SpineSpriteAtlasAsset.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Asset Types/SpineSpriteAtlasAsset.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Components.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Following.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Following/BoneFollower.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Following/BoneFollower.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Following/BoneFollowerGraphic.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Following/BoneFollowerGraphic.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Following/BoundingBoxFollower.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Following/BoundingBoxFollower.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Following/BoundingBoxFollowerGraphic.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Following/BoundingBoxFollowerGraphic.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Following/PointFollower.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Following/PointFollower.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RootMotion.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RootMotion/SkeletonMecanimRootMotion.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RootMotion/SkeletonMecanimRootMotion.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RootMotion/SkeletonRootMotion.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RootMotion/SkeletonRootMotion.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RootMotion/SkeletonRootMotionBase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RootMotion/SkeletonRootMotionBase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonAnimation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonAnimation.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonGraphic.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonGraphic.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonMecanim.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonMecanim.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonRenderSeparator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonRenderSeparator/SkeletonPartsRenderer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonRenderSeparator/SkeletonPartsRenderer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonRenderSeparator/SkeletonRenderSeparator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonRenderSeparator/SkeletonRenderSeparator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonRenderer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonRenderer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonRendererCustomMaterials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonRendererCustomMaterials/SkeletonGraphicCustomMaterials.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonRendererCustomMaterials/SkeletonGraphicCustomMaterials.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonRendererCustomMaterials/SkeletonRendererCustomMaterials.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonRendererCustomMaterials/SkeletonRendererCustomMaterials.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonUtility.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonUtility/ActivateBasedOnFlipDirection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonUtility/ActivateBasedOnFlipDirection.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonUtility/FollowLocationRigidbody.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonUtility/FollowLocationRigidbody.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonUtility/FollowLocationRigidbody2D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonUtility/FollowLocationRigidbody2D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonUtility/FollowSkeletonUtilityRootRotation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonUtility/FollowSkeletonUtilityRootRotation.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonUtility/SkeletonUtility.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonUtility/SkeletonUtility.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonUtility/SkeletonUtilityBone.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonUtility/SkeletonUtilityBone.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonUtility/SkeletonUtilityConstraint.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonUtility/SkeletonUtilityConstraint.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Deprecated.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Deprecated/SlotBlendModes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Deprecated/SlotBlendModes/SlotBlendModes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Deprecated/SlotBlendModes/SlotBlendModes.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ISkeletonAnimation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ISkeletonAnimation.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Materials/SkeletonGraphicDefault.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Materials/SkeletonGraphicDefault.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Materials/SkeletonGraphicDefaultOutline.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Materials/SkeletonGraphicDefaultOutline.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Materials/SkeletonGraphicTintBlack.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Materials/SkeletonGraphicTintBlack.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Materials/SkeletonGraphicTintBlackOutline.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Materials/SkeletonGraphicTintBlackOutline.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mesh Generation.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mesh Generation/DoubleBuffered.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mesh Generation/DoubleBuffered.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mesh Generation/MeshGenerator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mesh Generation/MeshGenerator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mesh Generation/MeshRendererBuffers.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mesh Generation/MeshRendererBuffers.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mesh Generation/SkeletonRendererInstruction.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mesh Generation/SkeletonRendererInstruction.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mesh Generation/SpineMesh.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mesh Generation/SpineMesh.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Modules.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Modules/TK2D.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Modules/TK2D/SpriteCollectionAttachmentLoader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Modules/TK2D/SpriteCollectionAttachmentLoader.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/BlendModes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/BlendModes/Spine-Skeleton-PMA-Additive.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/BlendModes/Spine-Skeleton-PMA-Additive.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/BlendModes/Spine-Skeleton-PMA-Multiply.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/BlendModes/Spine-Skeleton-PMA-Multiply.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/BlendModes/Spine-Skeleton-PMA-Screen.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/BlendModes/Spine-Skeleton-PMA-Screen.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/CGIncludes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/CGIncludes/Spine-DepthOnlyPass.cginc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/CGIncludes/Spine-DepthOnlyPass.cginc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/CGIncludes/Spine-Outline-Common.cginc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/CGIncludes/Spine-Outline-Common.cginc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/CGIncludes/Spine-Skeleton-Lit-Common-Shadow.cginc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/CGIncludes/Spine-Skeleton-Lit-Common-Shadow.cginc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/CGIncludes/Spine-Skeleton-Lit-Common.cginc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/CGIncludes/Spine-Skeleton-Lit-Common.cginc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/CGIncludes/Spine-Skeleton-Tint-Common.cginc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/CGIncludes/Spine-Skeleton-Tint-Common.cginc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/BlendModes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/BlendModes/Spine-Skeleton-PMA-Additive-Outline.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/BlendModes/Spine-Skeleton-PMA-Additive-Outline.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/BlendModes/Spine-Skeleton-PMA-Multiply-Outline.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/BlendModes/Spine-Skeleton-PMA-Multiply-Outline.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/BlendModes/Spine-Skeleton-PMA-Screen-Outline.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/BlendModes/Spine-Skeleton-PMA-Screen-Outline.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/CGIncludes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/CGIncludes/Spine-Outline-Pass.cginc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/CGIncludes/Spine-Outline-Pass.cginc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/SkeletonGraphic.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/SkeletonGraphic/Spine-SkeletonGraphic-Outline.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/SkeletonGraphic/Spine-SkeletonGraphic-Outline.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/SkeletonGraphic/Spine-SkeletonGraphic-TintBlack-Outline.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/SkeletonGraphic/Spine-SkeletonGraphic-TintBlack-Outline.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/Spine-Skeleton-Fill-Outline.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/Spine-Skeleton-Fill-Outline.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/Spine-Skeleton-Lit-Outline.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/Spine-Skeleton-Lit-Outline.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/Spine-Skeleton-Lit-ZWrite-Outline.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/Spine-Skeleton-Lit-ZWrite-Outline.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/Spine-Skeleton-Outline.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/Spine-Skeleton-Outline.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/Spine-Skeleton-OutlineOnly-ZWrite.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/Spine-Skeleton-OutlineOnly-ZWrite.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/Spine-Skeleton-Tint-Outline.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/Spine-Skeleton-Tint-Outline.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/Spine-Skeleton-TintBlack-Outline.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/Spine-Skeleton-TintBlack-Outline.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/Spine-Special-Skeleton-Grayscale-Outline.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/Spine-Special-Skeleton-Grayscale-Outline.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/Sprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/Sprite/SpritesPixelLit-Outline.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/Sprite/SpritesPixelLit-Outline.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/Sprite/SpritesUnlit-Outline.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/Sprite/SpritesUnlit-Outline.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/Sprite/SpritesVertexLit-Outline.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Outline/Sprite/SpritesVertexLit-Outline.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/SkeletonGraphic.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/SkeletonGraphic/Spine-SkeletonGraphic-TintBlack.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/SkeletonGraphic/Spine-SkeletonGraphic-TintBlack.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/SkeletonGraphic/Spine-SkeletonGraphic.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/SkeletonGraphic/Spine-SkeletonGraphic.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Spine-Skeleton-Fill.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Spine-Skeleton-Fill.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Spine-Skeleton-Lit-ZWrite.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Spine-Skeleton-Lit-ZWrite.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Spine-Skeleton-Lit.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Spine-Skeleton-Lit.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Spine-Skeleton-Tint.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Spine-Skeleton-Tint.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Spine-Skeleton-TintBlack.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Spine-Skeleton-TintBlack.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Spine-Skeleton.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Spine-Skeleton.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Spine-Special-Skeleton-Grayscale.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Spine-Special-Skeleton-Grayscale.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Sprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Sprite/CGIncludes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Sprite/CGIncludes/ShaderMaths.cginc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Sprite/CGIncludes/ShaderMaths.cginc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Sprite/CGIncludes/ShaderShared.cginc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Sprite/CGIncludes/ShaderShared.cginc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Sprite/CGIncludes/SpriteLighting.cginc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Sprite/CGIncludes/SpriteLighting.cginc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Sprite/CGIncludes/SpritePixelLighting.cginc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Sprite/CGIncludes/SpritePixelLighting.cginc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Sprite/CGIncludes/SpriteShadows.cginc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Sprite/CGIncludes/SpriteShadows.cginc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Sprite/CGIncludes/SpriteSpecular.cginc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Sprite/CGIncludes/SpriteSpecular.cginc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Sprite/CGIncludes/SpriteUnlit.cginc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Sprite/CGIncludes/SpriteUnlit.cginc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Sprite/CGIncludes/SpriteVertexLighting.cginc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Sprite/CGIncludes/SpriteVertexLighting.cginc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Sprite/CameraDepthNormalsTexture.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Sprite/CameraDepthNormalsTexture.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Sprite/CameraDepthTexture.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Sprite/CameraDepthTexture.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Sprite/CameraNormalsTexture.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Sprite/CameraNormalsTexture.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Sprite/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Sprite/README.md.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Sprite/SpriteDepthNormalsTexture.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Sprite/SpriteDepthNormalsTexture.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Sprite/SpritesPixelLit.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Sprite/SpritesPixelLit.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Sprite/SpritesUnlit.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Sprite/SpritesUnlit.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Sprite/SpritesVertexLit.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Sprite/SpritesVertexLit.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Utility.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Utility/Hidden-Spine-Bones.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Utility/Hidden-Spine-Bones.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Utility/HiddenPass.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Utility/HiddenPass.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Utility/HiddenPass.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shaders/Utility/HiddenPass.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SkeletonDataModifierAssets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SkeletonDataModifierAssets/BlendModeMaterials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SkeletonDataModifierAssets/BlendModeMaterials/BlendModeMaterialsAsset.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SkeletonDataModifierAssets/BlendModeMaterials/BlendModeMaterialsAsset.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SkeletonDataModifierAssets/BlendModeMaterials/Default BlendModeMaterials.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SkeletonDataModifierAssets/BlendModeMaterials/Default BlendModeMaterials.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SkeletonDataModifierAssets/BlendModeMaterials/SkeletonPMAAdditive.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SkeletonDataModifierAssets/BlendModeMaterials/SkeletonPMAAdditive.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SkeletonDataModifierAssets/BlendModeMaterials/SkeletonPMAMultiply.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SkeletonDataModifierAssets/BlendModeMaterials/SkeletonPMAMultiply.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SkeletonDataModifierAssets/BlendModeMaterials/SkeletonPMAScreen.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SkeletonDataModifierAssets/BlendModeMaterials/SkeletonPMAScreen.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpineAttributes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpineAttributes.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Utility.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Utility/AtlasUtilities.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Utility/AtlasUtilities.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Utility/AttachmentCloneExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Utility/AttachmentCloneExtensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Utility/AttachmentRegionExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Utility/AttachmentRegionExtensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Utility/MaterialChecks.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Utility/MaterialChecks.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Utility/SkeletonExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Utility/SkeletonExtensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Utility/SkinUtilities.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Utility/SkinUtilities.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Utility/TimelineExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Utility/TimelineExtensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Utility/YieldInstructions.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Utility/YieldInstructions/WaitForSpineAnimation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Utility/YieldInstructions/WaitForSpineAnimation.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Utility/YieldInstructions/WaitForSpineAnimationComplete.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Utility/YieldInstructions/WaitForSpineAnimationComplete.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Utility/YieldInstructions/WaitForSpineAnimationEnd.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Utility/YieldInstructions/WaitForSpineAnimationEnd.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Utility/YieldInstructions/WaitForSpineEvent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Utility/YieldInstructions/WaitForSpineEvent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Utility/YieldInstructions/WaitForSpineTrackEntryEnd.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Utility/YieldInstructions/WaitForSpineTrackEntryEnd.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../package.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../version.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../version.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SpineAnim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SpineAnim/SowrdArt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SpineAnim/SowrdArt/skeleton.atlas.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SpineAnim/SowrdArt/skeleton.atlas.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SpineAnim/SowrdArt/skeleton.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SpineAnim/SowrdArt/skeleton.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SpineAnim/SowrdArt/skeleton.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SpineAnim/SowrdArt/skeleton.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SpineAnim/SowrdArt/skeleton_Atlas.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SpineAnim/SowrdArt/skeleton_Atlas.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SpineAnim/SowrdArt/skeleton_Material.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SpineAnim/SowrdArt/skeleton_Material.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SpineAnim/SowrdArt/skeleton_SkeletonData.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SpineAnim/SowrdArt/skeleton_SkeletonData.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Documentation.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Fonts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Fonts/Anton OFL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Fonts/Anton OFL.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Fonts/Anton.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Fonts/Anton.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Fonts/Bangers - OFL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Fonts/Bangers - OFL.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Fonts/Bangers.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Fonts/Bangers.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Fonts/Electronic Highway Sign.TTF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Fonts/Electronic Highway Sign.TTF.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Fonts/Oswald-Bold - OFL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Fonts/Oswald-Bold - OFL.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Fonts/Oswald-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Fonts/Oswald-Bold.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Fonts/Roboto-Bold - AFL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Fonts/Roboto-Bold - AFL.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Fonts/Roboto-Bold - License.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Fonts/Roboto-Bold - License.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Fonts/Roboto-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Fonts/Roboto-Bold.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Fonts/Unity - OFL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Fonts/Unity - OFL.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Fonts/Unity.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Fonts/Unity.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Materials/Crate - Surface Shader Scene.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Materials/Crate - Surface Shader Scene.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Materials/Ground - Logo Scene.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Materials/Ground - Logo Scene.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Materials/Ground - Surface Shader Scene.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Materials/Ground - Surface Shader Scene.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Materials/Small Crate_diffuse.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Materials/Small Crate_diffuse.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Prefabs/Text Popup.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Prefabs/Text Popup.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Prefabs/TextMeshPro - Prefab 1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Prefabs/TextMeshPro - Prefab 1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Prefabs/TextMeshPro - Prefab 2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Prefabs/TextMeshPro - Prefab 2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Color Gradient Presets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Color Gradient Presets/Blue to Purple - Vertical.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Color Gradient Presets/Blue to Purple - Vertical.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Color Gradient Presets/Dark to Light Green - Vertical.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Color Gradient Presets/Dark to Light Green - Vertical.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Color Gradient Presets/Light to Dark Green - Vertical.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Color Gradient Presets/Light to Dark Green - Vertical.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Color Gradient Presets/Yellow to Orange - Vertical.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Color Gradient Presets/Yellow to Orange - Vertical.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF - Drop Shadow.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF - Drop Shadow.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF - Outline.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF - Outline.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF - Sunny Days.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF - Sunny Days.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF - Drop Shadow - 2 Pass.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF - Drop Shadow - 2 Pass.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF - Drop Shadow.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF - Drop Shadow.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF - Outline.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF - Outline.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF Glow.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF Glow.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF Logo.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF Logo.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/LiberationSans SDF - Metalic Green.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/LiberationSans SDF - Metalic Green.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/LiberationSans SDF - Overlay.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/LiberationSans SDF - Overlay.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/LiberationSans SDF - Soft Mask.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/LiberationSans SDF - Soft Mask.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF - Drop Shadow.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF - Drop Shadow.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF - HDRP Unlit.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF - HDRP Unlit.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF - Surface.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF - Surface.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Unity SDF - HDRP LIT - Bloom.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Unity SDF - HDRP LIT - Bloom.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Unity SDF - HDRP LIT - Outline.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Unity SDF - HDRP LIT - Outline.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Unity SDF.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Unity SDF.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Sprite Assets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Sprite Assets/Default Sprite Asset.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Sprite Assets/Default Sprite Asset.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Sprite Assets/DropCap Numbers.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Resources/Sprite Assets/DropCap Numbers.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/01-  Single Line TextMesh Pro.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/01-  Single Line TextMesh Pro.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/02 - Multi-line TextMesh Pro.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/02 - Multi-line TextMesh Pro.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/03 - Line Justification.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/03 - Line Justification.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/04 - Word Wrapping.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/04 - Word Wrapping.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/05 - Style Tags.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/05 - Style Tags.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/06 - Extra Rich Text Examples.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/06 - Extra Rich Text Examples.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/07 - Superscript &amp; Subscript Example.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/07 - Superscript &amp; Subscript Example.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/08 - Improved Text Alignment.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/08 - Improved Text Alignment.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/09 - Margin Tag Example.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/09 - Margin Tag Example.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/10 - Bullets &amp; Numbered List Example.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/10 - Bullets &amp; Numbered List Example.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/11 - The Style Tag.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/11 - The Style Tag.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/12 - Link Example.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/12 - Link Example.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/12a - Text Interactions.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/12a - Text Interactions.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/13 - Soft Hyphenation.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/13 - Soft Hyphenation.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/14 - Multi Font &amp; Sprites.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/14 - Multi Font &amp; Sprites.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/15 - Inline Graphics &amp; Sprites.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/15 - Inline Graphics &amp; Sprites.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/16 - Linked text overflow mode example.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/16 - Linked text overflow mode example.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/17 - Old Computer Terminal.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/17 - Old Computer Terminal.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/18 - ScrollRect &amp; Masking &amp; Layout.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/18 - ScrollRect &amp; Masking &amp; Layout.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/19 - Masking Texture &amp; Soft Mask.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/19 - Masking Texture &amp; Soft Mask.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/20 - Input Field with Scrollbar.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/20 - Input Field with Scrollbar.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/21 - Script Example.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/21 - Script Example.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/22 - Basic Scripting Example.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/22 - Basic Scripting Example.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/23 - Animating Vertex Attributes.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/23 - Animating Vertex Attributes.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/24 - Surface Shader Example.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/24 - Surface Shader Example.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/25 - Sunny Days Example.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/25 - Sunny Days Example.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/26 - Dropdown Placeholder Example.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/26 - Dropdown Placeholder Example.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/27 - Double Pass Shader Example.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/27 - Double Pass Shader Example.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/28 - HDRP Shader Example.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/28 - HDRP Shader Example.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/Benchmark (Floating Text).unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scenes/Benchmark (Floating Text).unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01_UGUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01_UGUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark02.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark02.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark03.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark03.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark04.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark04.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/CameraController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/CameraController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/ChatController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/ChatController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/DropdownSample.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/DropdownSample.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/EnvMapAnimator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/EnvMapAnimator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/ObjectSpin.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/ObjectSpin.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/ShaderPropAnimator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/ShaderPropAnimator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/SimpleScript.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/SimpleScript.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/SkewTextExample.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/SkewTextExample.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/TMP_DigitValidator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/TMP_DigitValidator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/TMP_ExampleScript_01.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/TMP_ExampleScript_01.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/TMP_FrameRateCounter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/TMP_FrameRateCounter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/TMP_PhoneNumberValidator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/TMP_PhoneNumberValidator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventCheck.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventCheck.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextInfoDebugTool.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextInfoDebugTool.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_A.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_A.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_B.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_B.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/TMP_UiFrameRateCounter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/TMP_UiFrameRateCounter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/TMPro_InstructionOverlay.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/TMPro_InstructionOverlay.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/TeleType.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/TeleType.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/TextConsoleSimulator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/TextConsoleSimulator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshProFloatingText.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshProFloatingText.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshSpawner.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshSpawner.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/VertexColorCycler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/VertexColorCycler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/VertexJitter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/VertexJitter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeA.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeA.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeB.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeB.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/VertexZoom.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/VertexZoom.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/WarpTextExample.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Scripts/WarpTextExample.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Sprites/Default Sprites.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Sprites/Default Sprites.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Sprites/DropCap Numbers.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Sprites/DropCap Numbers.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Textures/Brushed Metal 3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Textures/Brushed Metal 3.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Textures/Floor Cement.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Textures/Floor Cement.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Textures/Floor Tiles 1 - diffuse.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Textures/Floor Tiles 1 - diffuse.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Textures/Fruit Jelly (B&amp;W).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Textures/Fruit Jelly (B&amp;W).jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Textures/Gradient Diagonal (Color).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Textures/Gradient Diagonal (Color).jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Textures/Gradient Horizontal (Color).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Textures/Gradient Horizontal (Color).jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Textures/Gradient Vertical (Color).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Textures/Gradient Vertical (Color).jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Textures/Mask Zig-n-Zag.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Textures/Mask Zig-n-Zag.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Textures/Small Crate_diffuse.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Textures/Small Crate_diffuse.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Textures/Small Crate_normal.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Textures/Small Crate_normal.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Textures/Sunny Days - Seamless.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Textures/Sunny Days - Seamless.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Textures/Text Overflow - Linked Text Image 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Textures/Text Overflow - Linked Text Image 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Textures/Text Overflow - Linked Text UI Screenshot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Textures/Text Overflow - Linked Text UI Screenshot.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Textures/Wipe Pattern - Circle.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Textures/Wipe Pattern - Circle.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Textures/Wipe Pattern - Diagonal.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Textures/Wipe Pattern - Diagonal.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Textures/Wipe Pattern - Radial Double.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Textures/Wipe Pattern - Radial Double.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Textures/Wipe Pattern - Radial Quad.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Examples &amp; Extras/Textures/Wipe Pattern - Radial Quad.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Fonts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Fonts/LiberationSans - OFL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Fonts/LiberationSans - OFL.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Fonts/LiberationSans.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Fonts/LiberationSans.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Resources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Resources/Fonts &amp; Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Drop Shadow.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Drop Shadow.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Resources/LineBreaking Following Characters.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Resources/LineBreaking Following Characters.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Resources/LineBreaking Leading Characters.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Resources/LineBreaking Leading Characters.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Resources/Sprite Assets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Resources/Style Sheets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Resources/TMP Settings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Resources/TMP Settings.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/SDFFunctions.hlsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/SDFFunctions.hlsl.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMP_Bitmap.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMP_Bitmap.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMP_SDF Overlay.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMP_SDF Overlay.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMP_SDF SSD.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMP_SDF SSD.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMP_SDF-HDRP LIT.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMP_SDF-HDRP LIT.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMP_SDF-HDRP UNLIT.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMP_SDF-HDRP UNLIT.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMP_SDF-Mobile-2-Pass.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMP_SDF-Mobile-2-Pass.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMP_SDF-Mobile.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMP_SDF-Surface.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMP_SDF-Surface.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMP_SDF-URP Lit.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMP_SDF-URP Lit.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMP_SDF-URP Unlit.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMP_SDF-URP Unlit.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMP_SDF.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMP_SDF.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMP_Sprite.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMP_Sprite.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMPro.cginc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMPro.cginc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMPro_Mobile.cginc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMPro_Mobile.cginc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMPro_Properties.cginc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMPro_Properties.cginc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMPro_Surface.cginc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Shaders/TMPro_Surface.cginc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Sprites/EmojiOne Attribution.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Sprites/EmojiOne Attribution.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Sprites/EmojiOne.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Sprites/EmojiOne.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Sprites/EmojiOne.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../TextMesh Pro/Sprites/EmojiOne.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+      <option value="repository" />
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Soraku7"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Soraku7/RenderURP.git",
+    "accountId": "b657c294-5d93-4be6-825f-1d7c1b3aeedb"
+  }
+}]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../../../../AmplifyShaderEditor/Plugins/Editor/Templates/TemplateMenuItems.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/RenderURP/Assets/AmplifyShaderEditor/Plugins/Editor/Templates/TemplateMenuItems.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2wlSvQ9Ns4Z2hiLwf283C4SNnjW" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.sync",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="dd2c0332-9c3e-4b55-9891-49caf777f382" name="更改" comment="" />
+      <created>1746614899248</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1746614899248</updated>
+      <workItem from="1746614908421" duration="495000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.Tasks.TaskCanceledException" breakIfHandledByOtherCode="false" displayValue="System.Threading.Tasks.TaskCanceledException" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
