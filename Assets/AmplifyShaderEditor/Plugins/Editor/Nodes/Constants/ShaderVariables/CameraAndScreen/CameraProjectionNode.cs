@@ -14,12 +14,12 @@ namespace AmplifyShaderEditor
 	}
 
 	[Serializable]
-	[NodeAttributes( "Projection Matrices", "Camera And Screen", "Camera's Projection/Inverse Projection matrix" )]
+	[NodeAttributes( "Projection Matrices", "CameraUse And Screen", "CameraUse's Projection/Inverse Projection matrix" )]
 	public sealed class CameraProjectionNode : ShaderVariablesNode
 	{
 		private const string _projMatrixLabelStr = "Projection Matrix";
-		private readonly string[] _projMatrixValuesStr = {  "Camera Projection",
-															"Inverse Camera Projection"};
+		private readonly string[] _projMatrixValuesStr = {  "CameraUse Projection",
+															"Inverse CameraUse Projection"};
 
 
 		[SerializeField]

@@ -9,7 +9,7 @@ namespace AmplifyShaderEditor
 {
 
 	[Serializable]
-	[NodeAttributes( "Grab Screen Color", "Camera And Screen", "Grabed pixel color value from screen" )]
+	[NodeAttributes( "Grab Screen Color", "CameraUse And Screen", "Grabed pixel color value from screen" )]
 	public sealed class ScreenColorNode : PropertyNode
 	{
 #if UNITY_5_6_OR_NEWER

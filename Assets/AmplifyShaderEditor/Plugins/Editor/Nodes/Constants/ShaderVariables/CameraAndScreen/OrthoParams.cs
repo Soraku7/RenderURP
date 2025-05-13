@@ -5,7 +5,7 @@ using System;
 namespace AmplifyShaderEditor
 {
 	[Serializable]
-	[NodeAttributes( "Ortho Params", "Camera And Screen", "Orthographic Parameters" )]
+	[NodeAttributes( "Ortho Params", "CameraUse And Screen", "Orthographic Parameters" )]
 	public sealed class OrthoParams : ConstVecShaderVariable
 	{
 		protected override void CommonInit( int uniqueId )

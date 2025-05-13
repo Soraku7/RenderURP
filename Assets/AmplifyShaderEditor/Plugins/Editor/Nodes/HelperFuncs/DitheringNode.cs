@@ -8,7 +8,7 @@ using System;
 namespace AmplifyShaderEditor
 {
 	[Serializable]
-	[NodeAttributes( "Dither", "Camera And Screen", "Generates a dithering pattern" )]
+	[NodeAttributes( "Dither", "CameraUse And Screen", "Generates a dithering pattern" )]
 	public sealed class DitheringNode : ParentNode
 	{
 		private const string InputTypeStr = "Pattern";

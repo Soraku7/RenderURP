@@ -5,7 +5,7 @@ using System;
 namespace AmplifyShaderEditor
 {
 	[Serializable]
-	[NodeAttributes( "Camera Depth Fade", "Camera And Screen", "Outputs a 0 - 1 gradient representing the distance between the surface of this object and camera near plane" )]
+	[NodeAttributes( "CameraUse Depth Fade", "CameraUse And Screen", "Outputs a 0 - 1 gradient representing the distance between the surface of this object and camera near plane" )]
 	public sealed class CameraDepthFade : ParentNode
 	{
 		//{0} - Eye Depth

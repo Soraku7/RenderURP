@@ -5,7 +5,7 @@ using System;
 namespace AmplifyShaderEditor
 {
 	[Serializable]
-	[NodeAttributes( "Compute Screen Pos", "Camera And Screen", "Computes texture coordinate for doing a screenspace-mapped texture sample. Input is clip space position" )]
+	[NodeAttributes( "Compute Screen Pos", "CameraUse And Screen", "Computes texture coordinate for doing a screenspace-mapped texture sample. Input is clip space position" )]
 	public sealed class ComputeScreenPosHlpNode : HelperParentNode
 	{
 		[SerializeField]

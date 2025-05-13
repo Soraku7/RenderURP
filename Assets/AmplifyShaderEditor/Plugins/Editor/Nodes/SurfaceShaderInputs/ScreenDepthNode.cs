@@ -8,7 +8,7 @@ using System;
 namespace AmplifyShaderEditor
 {
 	[Serializable]
-	[NodeAttributes( "Screen Depth", "Camera And Screen", "Given a screen position returns the depth of the scene to the object as seen by the camera" )]
+	[NodeAttributes( "Screen Depth", "CameraUse And Screen", "Given a screen position returns the depth of the scene to the object as seen by the camera" )]
 	public sealed class ScreenDepthNode : ParentNode
 	{
 		[SerializeField]

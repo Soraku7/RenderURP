@@ -5,7 +5,7 @@ using System;
 namespace AmplifyShaderEditor
 {
 	[Serializable]
-	[NodeAttributes( "Z-Buffer Params", "Camera And Screen", "Linearized Z buffer values" )]
+	[NodeAttributes( "Z-Buffer Params", "CameraUse And Screen", "Linearized Z buffer values" )]
 	public sealed class ZBufferParams : ConstVecShaderVariable
 	{
 		protected override void CommonInit( int uniqueId )

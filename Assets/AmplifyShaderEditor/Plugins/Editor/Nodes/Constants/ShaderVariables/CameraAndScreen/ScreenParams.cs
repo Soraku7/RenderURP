@@ -5,7 +5,7 @@ using System;
 namespace AmplifyShaderEditor
 {
 	[Serializable]
-	[NodeAttributes( "Screen Params", "Camera And Screen", "Camera's Render Target size parameters" )]
+	[NodeAttributes( "Screen Params", "CameraUse And Screen", "CameraUse's Render Target size parameters" )]
 	public sealed class ScreenParams : ConstVecShaderVariable
 	{
 		protected override void CommonInit( int uniqueId )

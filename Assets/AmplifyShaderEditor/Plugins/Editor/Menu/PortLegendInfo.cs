@@ -252,7 +252,7 @@ namespace AmplifyShaderEditor
 				DrawItem( "Q", "Alternative Pan modifier" );
 				DrawItem( "Ctrl + F", "Find nodes" );
 				DrawItem( "LMB Drag", "Box selection" );
-				DrawItem( "MMB/RMB Drag", "Camera pan" );
+				DrawItem( "MMB/RMB Drag", "CameraUse pan" );
 				DrawItem( "Alt + MMB/RMB Drag", "Zoom graph" );
 				DrawItem( "Shift/Ctrl + Node Select", "Add/Remove from selection" );
 				DrawItem( "Shift + Node Drag", "Node move with offset" );

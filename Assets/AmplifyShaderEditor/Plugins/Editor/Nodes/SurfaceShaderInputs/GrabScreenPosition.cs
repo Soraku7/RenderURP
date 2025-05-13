@@ -8,7 +8,7 @@ using UnityEngine;
 namespace AmplifyShaderEditor
 {
 	[Serializable]
-	[NodeAttributes( "Grab Screen Position", "Camera And Screen", "Screen position correctly transformed to be used with Grab Screen Color" )]
+	[NodeAttributes( "Grab Screen Position", "CameraUse And Screen", "Screen position correctly transformed to be used with Grab Screen Color" )]
 	public sealed class GrabScreenPosition : ParentNode
 	{
 		private readonly string[] m_outputTypeStr = { "Normalized", "Screen" };

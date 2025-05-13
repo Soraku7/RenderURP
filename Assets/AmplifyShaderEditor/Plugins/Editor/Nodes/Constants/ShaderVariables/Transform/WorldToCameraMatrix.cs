@@ -4,7 +4,7 @@
 namespace AmplifyShaderEditor
 {
 	[System.Serializable]
-	[NodeAttributes( "World To Camera Matrix", "Matrix Transform", "Inverse of current camera to world matrix" )]
+	[NodeAttributes( "World To CameraUse Matrix", "Matrix Transform", "Inverse of current camera to world matrix" )]
 	public sealed class WorldToCameraMatrix : ConstantShaderVariable
 	{
 		protected override void CommonInit( int uniqueId )

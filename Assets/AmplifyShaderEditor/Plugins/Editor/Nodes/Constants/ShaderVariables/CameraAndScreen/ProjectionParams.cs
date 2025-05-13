@@ -5,7 +5,7 @@ using System;
 namespace AmplifyShaderEditor
 {
 	[Serializable]
-	[NodeAttributes( "Projection Params", "Camera And Screen", "Projection Near/Far parameters" )]
+	[NodeAttributes( "Projection Params", "CameraUse And Screen", "Projection Near/Far parameters" )]
 	public sealed class ProjectionParams : ConstVecShaderVariable
 	{
 		protected override void CommonInit( int uniqueId )

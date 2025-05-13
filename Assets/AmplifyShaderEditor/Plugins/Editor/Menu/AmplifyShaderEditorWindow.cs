@@ -82,7 +82,7 @@ namespace AmplifyShaderEditor
 		[SerializeField]
 		private ParentGraph m_mainGraphInstance;
 
-		// Camera control
+		// CameraUse control
 		[SerializeField]
 		private Vector2 m_cameraOffset;
 
@@ -3957,7 +3957,7 @@ namespace AmplifyShaderEditor
 						}
 						else
 						{
-							//ShowMessage( "Camera parameters are corrupted" );
+							//ShowMessage( "CameraUse parameters are corrupted" );
 						}
 
 						// valid instructions are only between the line after version and the line before the last one ( which contains ShaderBodyEnd ) 
@@ -4305,7 +4305,7 @@ namespace AmplifyShaderEditor
 						}
 						else
 						{
-							ShowMessage( "Camera parameters are corrupted" );
+							ShowMessage( "CameraUse parameters are corrupted" );
 						}
 
 						// valid instructions are only between the line after version and the line before the last one ( which contains ShaderBodyEnd ) 
@@ -4901,7 +4901,7 @@ namespace AmplifyShaderEditor
 			// Nodes Graph background area
 			//GUILayout.BeginArea( m_graphArea, "Nodes" );
 			{
-				// Camera movement is simulated by grabing the current camera offset, transforming it into texture space and manipulating the tiled texture uv coords
+				// CameraUse movement is simulated by grabing the current camera offset, transforming it into texture space and manipulating the tiled texture uv coords
 				GUI.DrawTextureWithTexCoords( m_graphArea, m_graphBgTexture,
 					new Rect( ( -m_cameraOffset.x / m_graphBgTexture.width ),
 								( m_cameraOffset.y / m_graphBgTexture.height ) - m_cameraZoom * m_cameraInfo.height / m_graphBgTexture.height,

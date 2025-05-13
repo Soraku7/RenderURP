@@ -414,7 +414,7 @@ namespace AmplifyShaderEditor
 		public static readonly string[] CategoryPresets =
 		{
 			"<Custom>",
-			"Camera And Screen",
+			"CameraUse And Screen",
 			"Constants And Properties",
 			"Functions",
 			"Image Effects",
@@ -551,7 +551,7 @@ namespace AmplifyShaderEditor
 			{ "Trigonometry Operators",             new Color( 0.1f, 0.20f, 0.35f, 1.0f)},//new Color( 0.8f, 0.07f, 0.18f, 1.0f)},
 			{ "Image Effects",                      new Color( 0.5f, 0.2f, 0.90f, 1.0f)},//new Color( 0.12f, 0.47f, 0.88f, 1.0f)},
 			{ "Miscellaneous",                      new Color( 0.49f, 0.32f, 0.60f, 1.0f)},
-			{ "Camera And Screen",                  new Color( 0.75f, 0.10f, 0.30f, 1.0f )},//new Color( 0.17f, 0.22f, 0.07f, 1.0f) },
+			{ "CameraUse And Screen",                  new Color( 0.75f, 0.10f, 0.30f, 1.0f )},//new Color( 0.17f, 0.22f, 0.07f, 1.0f) },
 			{ "Constants And Properties",           new Color( 0.42f, 0.70f, 0.22f, 1.0f) },
 			{ "Surface Data",                       new Color( 0.92f, 0.73f, 0.03f, 1.0f)},
 			{ "Matrix Transform",                   new Color( 0.09f, 0.43f, 0.2f, 1.0f) },

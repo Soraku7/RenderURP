@@ -18,7 +18,7 @@ namespace AmplifyShaderEditor
 	}
 
 	[Serializable]
-	[NodeAttributes( "Clip Planes", "Camera And Screen", "Camera World Clip Planes" )]
+	[NodeAttributes( "Clip Planes", "CameraUse And Screen", "CameraUse World Clip Planes" )]
 	public sealed class CameraWorldClipPlanes : ShaderVariablesNode
 	{
 		[SerializeField]

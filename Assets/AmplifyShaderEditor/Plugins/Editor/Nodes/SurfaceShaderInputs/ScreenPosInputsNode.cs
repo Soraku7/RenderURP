@@ -8,7 +8,7 @@ using System;
 namespace AmplifyShaderEditor
 {
 	[Serializable]
-	[NodeAttributes( "Screen Position", "Camera And Screen", "Screen space position, you can either get the <b>Screen</b> position as is or <b>Normalize</b> it to have it at the [0,1] range" )]
+	[NodeAttributes( "Screen Position", "CameraUse And Screen", "Screen space position, you can either get the <b>Screen</b> position as is or <b>Normalize</b> it to have it at the [0,1] range" )]
 	public sealed class ScreenPosInputsNode : SurfaceShaderINParentNode
 	{
 		private const string ProjectStr = "Project";
