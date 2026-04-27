@@ -122,7 +122,7 @@ Material:
     - _GlossyReflections: 0
     - _Metallic: 0
     - _NormalScale: 1.06
-    - _NormalStrength: 0.48
+    - _NormalStrength: 0.44
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueOffset: 0
@@ -130,7 +130,7 @@ Material:
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _SpecularPow: 62
+    - _SpecularPow: 54.8
     - _SpecularRange: 1
     - _SpecularStrenght: 1
     - _SpecularX: 0
