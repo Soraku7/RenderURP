@@ -1,0 +1,147 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: Terrain 4 Layer BasePass
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.9.5\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19905\nNode;AmplifyShaderEditor.CommentaryNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;94;-1544.785,-1079.201;Inherit;False;589.0223;257.0592;_Color
+    (\"Main Color\", Color) = (1,1,1,1);3;132;131;130;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;95;-1544.785,-1367.201;Inherit;False;590.1609;263.3945;_SpecColor
+    (\"Specular Color\", Color) = (0.5, 0.5, 0.5, 1);3;136;135;127;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;96;-2616.785,568.7991;Inherit;False;901.2057;383.1604;Vertex
+    Tangents;5;104;103;102;101;92;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;97;-2616.785,184.7991;Inherit;False;899.9009;360.7447;Vertex
+    Tangents;5;108;107;106;105;91;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;98;-2600.785,-695.2009;Inherit;False;130.5;130;TecCoord;1;116;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;99;-2600.785,-263.2009;Inherit;False;130.5;130;TecCoord;1;120;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;100;-656,-576;Inherit;False;1066.008;606.6229;[HideInInspector][NoScaleOffset]_TerrainHolesTexture(\"Holes
+    Map (RGB)\", 2D) = \"white\" {};9;153;152;151;150;149;148;140;139;137;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.Vector3Node,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;101;-2520.785,776.7991;Inherit;False;Constant;_Vector8;Vector
+    7;234;0;Create;True;0;0;0;False;0;False;0,0,1;0,0,0;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.NormalVertexDataNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;102;-2520.785,632.7991;Inherit;False;0;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.CrossProductOpNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;103;-2312.785,632.7991;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.DynamicAppendNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;104;-2152.785,632.7991;Inherit;False;FLOAT4;4;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;-1;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.CustomExpressionNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;105;-2552.785,264.7991;Float;False;v.tangent.xyz
+    = cross ( v.normal, float3( 0, 0, 1 ) )@$v.tangent.w = -1@;1;Call;0;CalculateTangentsStandard;True;False;0;;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;106;-2296.785,264.7991;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionSwitchByPipeline,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;107;-2136.785,280.7991;Inherit;False;4;0;FLOAT3;0,0,0;False;3;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.NormalVertexDataNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;108;-2488.785,344.7991;Inherit;False;0;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.WireNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;109;-1880.785,-423.2009;Inherit;False;1;0;SAMPLERSTATE;;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.SamplerNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;110;-1800.785,-487.2009;Inherit;True;Property;_TextureSample4;Texture
+    Sample 4;10;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;False;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;6;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT3;5\nNode;AmplifyShaderEditor.SamplerNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;111;-1800.785,-71.20087;Inherit;True;Property;_TextureSample0;Texture
+    Sample 0;4;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;False;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;6;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT3;5\nNode;AmplifyShaderEditor.WireNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;112;-1864.785,-7.200867;Inherit;False;1;0;SAMPLERSTATE;;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.TextureTransformNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;113;-2360.785,-583.2009;Inherit;False;-1;False;1;0;SAMPLER2D;;False;2;FLOAT2;0;FLOAT2;1\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;114;-2136.785,-647.2009;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleAddOpNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;115;-1976.785,-583.2009;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.RelayNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;116;-2584.785,-647.2009;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.TextureTransformNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;117;-2344.785,-151.2009;Inherit;False;-1;False;1;0;SAMPLER2D;;False;2;FLOAT2;0;FLOAT2;1\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;118;-2120.785,-215.2009;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleAddOpNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;119;-1960.785,-151.2009;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.RelayNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;120;-2584.785,-215.2009;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.WireNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;121;-2664.785,-231.2009;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.WireNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;122;-2664.785,-583.2009;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.TexCoordVertexDataNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;123;-2872.785,-647.2009;Inherit;False;0;2;0;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SwizzleNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;124;-1480.785,-487.2009;Inherit;False;FLOAT3;0;1;2;3;1;0;COLOR;0,0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.StickyNoteNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;125;-2871.452,-487.2009;Inherit;False;196.6666;126;_MainTex;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.StickyNoteNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;126;-2872.785,-71.20087;Inherit;False;196.6666;126;_MetallicTex;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.StickyNoteNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;127;-1528.785,-1319.201;Inherit;False;142.1909;120.1633;Specular
+    Color;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.TexturePropertyNode, AmplifyShaderEditor,
+    Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;128;-2600.785,-487.2009;Inherit;True;Property;_MainTex;_MainTex;1;0;Create;False;0;0;0;False;0;False;None;None;False;white;Auto;Texture2D;False;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1\nNode;AmplifyShaderEditor.TexturePropertyNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;129;-2600.785,-71.20087;Inherit;True;Property;_MetallicTex;_MetallicTex;2;0;Create;True;0;0;0;False;0;False;None;None;False;white;Auto;Texture2D;False;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1\nNode;AmplifyShaderEditor.StickyNoteNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;130;-1528.785,-1031.201;Inherit;False;142.1909;120.1633;Main
+    Color;;0,0,0,1;used in fallback on old cards;0;0\nNode;AmplifyShaderEditor.ColorNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;131;-1368.785,-1031.201;Half;False;Property;_Color;Main
+    Color;0;0;Create;False;0;0;0;False;0;False;1,1,1,1;1,1,1,1;False;True;0;6;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT3;5\nNode;AmplifyShaderEditor.SwizzleNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;132;-1128.785,-1031.201;Inherit;False;FLOAT3;0;1;2;3;1;0;COLOR;0,0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.WireNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;133;-920.7853,-951.2009;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.RangedFloatNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;134;-1048.785,-407.2009;Inherit;False;Constant;_Float0;Float
+    0;3;0;Create;True;0;0;0;False;0;False;1;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.ColorNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;135;-1368.785,-1319.201;Inherit;False;Property;_SpecColor;Specular
+    Color;4;0;Create;False;0;0;0;False;0;False;0.5,0.5,0.5,1;0,0,0,0;True;True;0;6;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT3;5\nNode;AmplifyShaderEditor.SwizzleNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;136;-1144.785,-1319.201;Inherit;False;FLOAT3;0;1;2;3;1;0;COLOR;0,0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.StickyNoteNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;137;-16,-320;Inherit;False;376.1325;121;#ifdef
+    _ALPHATEST_ON;;0,0,0,1;float hole = tex2D(_TerrainHolesTexture, uv).r@$clip(hole
+    == 0.0005f ? -1 : 1)@;0;0\nNode;AmplifyShaderEditor.StickyNoteNode, AmplifyShaderEditor,
+    Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;138;-24.78528,56.79913;Inherit;False;601.392;438.1022;Alpha
+    / Alpha Clip;;0,0,0,1;(hole, 0.5)@;0;0\nNode;AmplifyShaderEditor.StickyNoteNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;139;-624,-128;Inherit;False;224.3698;106.5446;Holes
+    Map;;0,0,0,1;white;0;0\nNode;AmplifyShaderEditor.StickyNoteNode, AmplifyShaderEditor,
+    Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;140;-352,-112;Inherit;False;258.5989;104.6638;float
+    epsilon = 0.0005f ;;0,0,0,1;Fixes bug where compression is enabled and 0 isn't
+    actually 0 but low like 1/2047. (UUM-61913);0;0\nNode;AmplifyShaderEditor.LerpOp,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;141;-856.7853,-519.2009;Inherit;False;3;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.WireNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;142;-904.7853,-535.2009;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SamplerNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;148;-352,-320;Inherit;True;Property;_TextureSample12;Texture
+    Sample 4;284;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;False;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;6;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT3;5\nNode;AmplifyShaderEditor.RelayNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;149;-176,-512;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionSwitch,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;150;176,-512;Inherit;False;Enable
+    Holes;True;1;2;1;In 0;In 1;Object;-1;20;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;11;FLOAT;0;False;12;FLOAT;0;False;13;FLOAT;0;False;14;FLOAT;0;False;15;FLOAT;0;False;16;FLOAT;0;False;17;FLOAT;0;False;18;FLOAT;0;False;19;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.WireNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;151;-64,-256;Inherit;False;1;0;COLOR;0,0,0,0;False;1;COLOR;0\nNode;AmplifyShaderEditor.CustomExpressionNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;152;-32,-448;Inherit;False;#ifdef
+    _ALPHATEST_ON$\tclip(Hole == 0.0005f? -1 : 1)@$#endif;1;Call;1;True;Hole;FLOAT;0;In;;Inherit;False;ClipHoles;False;False;0;;False;2;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.TexturePropertyNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;153;-624,-320;Inherit;True;Property;_TerrainHolesTexture;_TerrainHolesTexture;3;2;[HideInInspector];[NoScaleOffset];Create;False;0;0;0;False;0;False;None;None;False;white;Auto;Texture2D;False;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1\nNode;AmplifyShaderEditor.FunctionSwitch,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;154;183.2147,216.7991;Inherit;False;Option;False;1;2;1;In
+    0;In 1;Instance;150;20;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;11;FLOAT;0;False;12;FLOAT;0;False;13;FLOAT;0;False;14;FLOAT;0;False;15;FLOAT;0;False;16;FLOAT;0;False;17;FLOAT;0;False;18;FLOAT;0;False;19;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionSwitch,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;155;183.2147,344.7991;Inherit;False;Option;False;1;2;1;In
+    0;In 1;Instance;150;20;0;FLOAT;0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;11;FLOAT;0;False;12;FLOAT;0;False;13;FLOAT;0;False;14;FLOAT;0;False;15;FLOAT;0;False;16;FLOAT;0;False;17;FLOAT;0;False;18;FLOAT;0;False;19;FLOAT;0;False;1;COLOR;0\nNode;AmplifyShaderEditor.WireNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;156;-72.78528,312.7991;Inherit;False;1;0;COLOR;0,0,0,0;False;1;COLOR;0\nNode;AmplifyShaderEditor.RangedFloatNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;157;7.214722,168.7991;Inherit;False;Constant;_Float11;Float
+    11;89;0;Create;True;0;0;0;False;0;False;1;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;158;7.214722,248.7991;Inherit;False;Constant;_Float10;Float
+    1;183;0;Create;True;0;0;0;False;0;False;0.5;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.OneMinusNode,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;159;7.214722,344.7991;Inherit;False;1;0;COLOR;0,0,0,0;False;1;COLOR;0\nNode;AmplifyShaderEditor.FunctionOutput,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;146;-1464.785,72.79913;Inherit;False;False;-1;Occlusion;3;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;161;407.2147,344.7991;Inherit;False;False;-1;Alpha
+    Clip;5;False;1;0;COLOR;0,0,0,0;False;1;COLOR;0\nNode;AmplifyShaderEditor.FunctionOutput,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;162;423.2147,216.7991;Inherit;False;False;-1;Alpha;4;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;58;448,-512;Inherit;False;False;-1;Base
+    Color;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionOutput,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;92;-1968,640;Inherit;False;False;-1;Vertex
+    Tangents;7;False;1;0;FLOAT4;0,0,0,0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.FunctionOutput,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;91;-1904,288;Inherit;False;False;-1;Vertex
+    Normals;6;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionOutput,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;52;-1488,-352;Inherit;False;False;-1;Smoothness;2;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput,
+    AmplifyShaderEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;51;-1472,-16;Inherit;False;True;-1;Metallic;1;False;1;0;FLOAT;0;False;1;FLOAT;0\nWireConnection;103;0;102;0\nWireConnection;103;1;101;0\nWireConnection;104;0;103;0\nWireConnection;106;0;105;0\nWireConnection;106;1;108;0\nWireConnection;107;0;106;0\nWireConnection;107;3;106;0\nWireConnection;107;1;108;0\nWireConnection;107;2;108;0\nWireConnection;109;0;128;1\nWireConnection;110;0;128;0\nWireConnection;110;1;115;0\nWireConnection;110;7;109;0\nWireConnection;111;0;129;0\nWireConnection;111;1;119;0\nWireConnection;111;7;112;0\nWireConnection;112;0;129;1\nWireConnection;113;0;128;0\nWireConnection;114;0;116;0\nWireConnection;114;1;113;0\nWireConnection;115;0;114;0\nWireConnection;115;1;113;1\nWireConnection;116;0;123;0\nWireConnection;117;0;129;0\nWireConnection;118;0;120;0\nWireConnection;118;1;117;0\nWireConnection;119;0;118;0\nWireConnection;119;1;117;1\nWireConnection;120;0;121;0\nWireConnection;121;0;122;0\nWireConnection;122;0;123;0\nWireConnection;124;0;110;0\nWireConnection;132;0;131;0\nWireConnection;133;0;132;0\nWireConnection;136;0;135;0\nWireConnection;141;0;142;0\nWireConnection;141;1;124;0\nWireConnection;141;2;134;0\nWireConnection;142;0;133;0\nWireConnection;148;0;153;0\nWireConnection;148;7;153;1\nWireConnection;149;0;141;0\nWireConnection;150;0;149;0\nWireConnection;150;1;152;0\nWireConnection;151;0;148;0\nWireConnection;152;0;149;0\nWireConnection;152;1;148;1\nWireConnection;154;0;157;0\nWireConnection;154;1;158;0\nWireConnection;155;0;157;0\nWireConnection;155;1;159;0\nWireConnection;156;0;151;0\nWireConnection;159;0;156;0\nWireConnection;146;0;111;2\nWireConnection;161;0;155;0\nWireConnection;162;0;154;0\nWireConnection;58;0;150;0\nWireConnection;92;0;104;0\nWireConnection;91;0;107;0\nWireConnection;52;0;110;4\nWireConnection;51;0;111;1\nASEEND*/\n//CHKSM=9EB6317A1F2338CA6CF81F3F8FD5668F45C57201"
+  m_functionName: 
+  m_description: 'Amplify Shader Pack Example
+
+    *BIRP
+
+    *URP'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.7647059, g: 0.30588236, b: 0, a: 1}
+  m_customNodeCategory: Amplify Shader Pack
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 
